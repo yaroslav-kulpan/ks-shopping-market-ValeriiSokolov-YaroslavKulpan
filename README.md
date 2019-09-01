@@ -1,3 +1,3 @@
-# ks-shopping-market-ValeriiSokolov-YaroslavKulpan
+# ks-shopping-market
 
 Над проектом работают Ярослав Кульпан и Валерий Соколов.
