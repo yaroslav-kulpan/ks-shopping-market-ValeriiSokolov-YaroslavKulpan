@@ -1,3 +1,4 @@
+// 'use strict';
 const gulp = require('gulp');
 const rigger = require('gulp-rigger');
 const sass = require('gulp-sass');							//sass
@@ -15,41 +16,43 @@ const imgFiles = ['./src/image/**/**.*'];
 const jsScript = ['./src/js/*.min.js'];
 const componentCss = ['./src/scss/components/*.css'];
 
-cleandev = () => gulp.src('./dist', {read: false}).pipe(clean());
-image = () => gulp.src(imgFiles).pipe(gulp.dest('./dist/image'));
-css = () => gulp.src(componentCss).pipe(gulp.dest('./dist/css'));
-js = () => gulp.src(jsScript).pipe(gulp.dest('./dist/js'));
-buildHtml = () => gulp.src('./src/*.html').pipe(rigger()).pipe(gulp.dest('./')).pipe(browserSync.stream());
+let cleandev = () => gulp.src('./dist', {read: false}).pipe(clean());
+let image = () => gulp.src(imgFiles).pipe(gulp.dest('./dist/image'));
+let css = () => gulp.src(componentCss).pipe(gulp.dest('./dist/css'));
+let js = () => gulp.src(jsScript).pipe(gulp.dest('./dist/js'));
+let buildHtml = () => gulp.src('./src/*.html').pipe(rigger()).pipe(gulp.dest('./')).pipe(browserSync.stream());
 
-scripts = () => gulp.src('src/js/main.js').pipe(rigger()).on('error', console.error.bind(console)).pipe(terser({toplevel: true}))												//minify js
-    .pipe(concat('main.js'))									//concat all js files
-    .pipe(rename(function (path) {							// function of rename extname for .css
-        path.extname = ".min.js";
-    }))
-    .pipe(gulp.dest('./dist/js')).pipe(browserSync.stream());
+let scripts = () => gulp.src('src/js/main.js')
+  .pipe(rigger()).on('error', console.error.bind(console))
+  .pipe(terser({toplevel: true}))												//minify js
+  .pipe(concat('main.js'))					  				//concat all js files
+  .pipe(rename(function (path) {							// function of rename extname for .css
+    path.extname = ".min.js";
+  }))
+  .pipe(gulp.dest('./dist/js')).pipe(browserSync.stream());
 
-forSass = () => gulp.src('./src/scss/**/*.scss')
-    .pipe(sourcemaps.init()).pipe(sass()).on('error', console.error.bind(console))
-    .pipe(cleanCSS({level: 2},))								// minifyCSS
-    .pipe(autoprefixer({
-        overrideBrowserslist: ['last 2 versions'],
-        cascade: false
-    }))
-    .pipe(concat('style.css'))
-    .pipe(rename(function (path) {							// function of rename extname for .css
-        path.extname = ".min.css";
-    }))
-    .pipe(sourcemaps.write('./../css')).pipe(gulp.dest('./dist/css')).pipe(browserSync.stream());
+let forSass = () => gulp.src('./src/scss/**/*.scss')
+  .pipe(sourcemaps.init()).pipe(sass()).on('error', console.error.bind(console))
+  .pipe(cleanCSS({level: 2},))								// minifyCSS
+  .pipe(autoprefixer({
+    overrideBrowserslist: ['last 2 versions'],
+    cascade: false
+  }))
+  .pipe(concat('style.css'))
+  .pipe(rename(function (path) {							// function of rename extname for .css
+    path.extname = ".min.css";
+  }))
+  .pipe(sourcemaps.write('./../css')).pipe(gulp.dest('./dist/css')).pipe(browserSync.stream());
 
-watch = () => {
-    browserSync.init({
-        server: {
-            baseDir: "./"
-        }
-    });
-    gulp.watch('./src/**/*.html', buildHtml);
-    gulp.watch('./src/**/*.scss', forSass);
-    gulp.watch('./src/**/*.js', scripts);
+let watch = () => {
+  browserSync.init({
+    server: {
+      baseDir: "./"
+    }
+  });
+  gulp.watch('./src/**/*.html', buildHtml);
+  gulp.watch('./src/**/*.scss', forSass);
+  gulp.watch('./src/**/*.js', scripts);
 };
 
 gulp.task('cleandev', cleandev);
