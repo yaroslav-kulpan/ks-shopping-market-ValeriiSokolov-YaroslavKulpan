@@ -11,8 +11,8 @@ const terser = require('gulp-terser');						//minify for js
 const autoprefixer = require('gulp-autoprefixer');			//cross-browser compatibility css
 // const imagemin = require('gulp-imagemin');
 
-const imgFiles = ['./src/image/**/**.*', './src/image/**/**.*'];
-const jsScript = ['./src/js/*.js'];
+const imgFiles = ['./src/image/**/**.*'];
+const jsScript = ['./src/js/*.min.js'];
 const componentCss = ['./src/scss/components/*.css'];
 
 cleandev = () => gulp.src('./dist', {read: false}).pipe(clean());
@@ -21,33 +21,25 @@ css = () => gulp.src(componentCss).pipe(gulp.dest('./dist/css'));
 js = () => gulp.src(jsScript).pipe(gulp.dest('./dist/js'));
 buildHtml = () => gulp.src('./src/*.html').pipe(rigger()).pipe(gulp.dest('./')).pipe(browserSync.stream());
 
-scripts = () => gulp.src('src/js/main.js')
-    .pipe(terser({											//terser
-        toplevel: true
-    }))														//minify js
+scripts = () => gulp.src('src/js/main.js').pipe(rigger()).on('error', console.error.bind(console)).pipe(terser({toplevel: true}))												//minify js
     .pipe(concat('main.js'))									//concat all js files
     .pipe(rename(function (path) {							// function of rename extname for .css
         path.extname = ".min.js";
     }))
-    .pipe(gulp.dest('./dist/js'))
-    .pipe(browserSync.stream());
+    .pipe(gulp.dest('./dist/js')).pipe(browserSync.stream());
 
 forSass = () => gulp.src('./src/scss/**/*.scss')
-    .pipe(sourcemaps.init())
-    .pipe(sass())
-    .on('error', console.error.bind(console))
-    .pipe(cleanCSS({level: 2}, ))								// minifyCSS
+    .pipe(sourcemaps.init()).pipe(sass()).on('error', console.error.bind(console))
+    .pipe(cleanCSS({level: 2},))								// minifyCSS
     .pipe(autoprefixer({
-        overrideBrowserslist: ['last 2 versions'],							// для браузеров которые использует 0.1%
+        overrideBrowserslist: ['last 2 versions'],
         cascade: false
     }))
     .pipe(concat('style.css'))
     .pipe(rename(function (path) {							// function of rename extname for .css
         path.extname = ".min.css";
     }))
-    .pipe(sourcemaps.write('./../css'))
-    .pipe(gulp.dest('./dist/css'))
-    .pipe(browserSync.stream());
+    .pipe(sourcemaps.write('./../css')).pipe(gulp.dest('./dist/css')).pipe(browserSync.stream());
 
 watch = () => {
     browserSync.init({

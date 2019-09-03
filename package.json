@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/Kylpan21/forkio_team_step"
+    "url": "git+"
   },
-  "author": "Yaroslav Kulpan === Valerii Sokolov",
+  "author": "Yaroslav Kulpan === Valerii Sokolov === Mykola Kunak",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/Kylpan21/forkio_team_step"
+    "url": ""
   },
-  "homepage": "https://gitlab.com/Kylpan21/forkio_team_step/blob/master/README.MD",
+  "homepage": "",
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.0",
