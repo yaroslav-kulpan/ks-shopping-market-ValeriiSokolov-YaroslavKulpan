@@ -1,2 +1,40 @@
 @import "../components/mixins";
 @import "../components/variable";
+
+.header {
+    background: $bg-header;
+    color: #fff;
+}
+
+.header-contact{
+    font-size: 17px;
+    border-bottom: 1px solid transparent;
+}
+
+.header-contact:hover {
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+}
+
+.fa-mobile-alt {
+    color: $logo-color;
+    font-size: 44px;
+}
+
+.bg-logo {
+    background: $logo-color;
+}
+
+.bg-header {
+    background: $bg-header;
+}
+
+.fa-shopping-basket {
+    font-size: 20px;
+    padding: 1rem 1rem 1rem 0.8rem;
+}
+
+.counter {
+    font-size: 14px;
+    padding: 0.15rem 0.6rem;
+}
