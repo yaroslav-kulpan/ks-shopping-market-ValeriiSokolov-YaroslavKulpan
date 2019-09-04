@@ -1,0 +1,34 @@
+@media only screen and (max-width: 767px) and (min-width: 481px) {
+.office-chair{
+  height: 170px;
+  &-title
+  {
+    font-size: 1.5rem;
+  }
+  &-text {
+    font-size: 1rem;
+  }
+  &-price {
+    font-size: 2rem;
+    //padding-right: 15px;
+  }
+  &-img1 {
+    width: 170px;
+    height: 240px;
+    top: -10px;
+  }
+  &-img2 {
+    width: 150px;
+    height: 180px;
+    top: 0;
+  }
+}
+
+  .special-collection{
+    height: 170px;
+    &-img{
+      width: 260px;
+      height: 200px;
+    }
+  }
+}

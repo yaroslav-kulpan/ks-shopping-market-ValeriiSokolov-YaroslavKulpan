@@ -1,0 +1,103 @@
+.sale {
+  &-sofa {
+    display: block;
+    height: 420px;
+    padding: 33px;
+    background: url("../image/stocks/1.jpg") no-repeat left / cover;
+
+    &-content {
+      background: rgba(73, 71, 63, 0.6);
+      height: 100%;
+    }
+
+    &-size {
+      text-align: center;
+      width: 160px;
+      font-size: 3rem;
+      border: 5px solid white;
+    }
+  }
+}
+
+.sofa-title {
+  font-size: 4rem;
+}
+
+.guest-room {
+  height: 20px;
+  letter-spacing: 2px;
+  font-size: 2rem;
+}
+
+.office-chair {
+  position: relative;
+  overflow: hidden;
+  height: 195px;
+  background-color: #e8edf7;
+
+  &-content {
+    color: black;
+  }
+
+  &-title {
+    font-size: 2rem;
+  }
+
+  &-text {
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+  }
+
+  &-price {
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+    color: #d58e32;
+  }
+
+  &-img1 {
+    position: relative;
+    width: 180px;
+    height: 270px;
+    top: -15px;
+    left: -33px;
+  }
+
+  &-img2 {
+    position: relative;
+    transform: scale(-1, 1);
+    width: 170px;
+    height: 200px;
+    top: -4px;
+    right: -10px;
+  }
+}
+
+.special-collection {
+  background-color: #fbf3f7;
+  position: relative;
+  overflow: hidden;
+  height: 195px;
+
+  &-img {
+    position: relative;
+    //position: absolute;
+    transform: scale(-1, 1);
+    width: 330px;
+    height: 230px;
+    left: -50px;
+  }
+  &-content {
+    //position: absolute;
+    position: relative;
+    left: -40px;
+    //left: 290px;
+  }
+  &-title {
+    color: #d58e32;
+    font-size: 1.4rem;
+  }
+  &-text {
+    color: black;
+  }
+}
+
