@@ -8,8 +8,8 @@ $(document).ready(function () {
         asNavFor: '.slider-nav',
     });
     $('.slider-nav').slick({
-        autoplay: true,
-        autoplaySpeed: 7000,
+        // autoplay: true,
+        // autoplaySpeed: 7000,
         slidesToShow: 6,
         slidesToScroll: 1,
         asNavFor: '.slider-for',

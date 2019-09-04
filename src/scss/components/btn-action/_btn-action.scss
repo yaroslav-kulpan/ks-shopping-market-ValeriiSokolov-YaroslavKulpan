@@ -1,0 +1,21 @@
+.btn-wishlist, .btn-add-cart, .btn-viewed {
+  padding: 5px 9px;
+  border: 1px solid #2a2a2a;
+  border-radius: 0;
+  color: #2a2a2a;
+  font-size: 16px;
+
+  &:hover {
+    border: 1px solid #d58e32;
+    color: #d58e32;
+  }
+}
+
+.btn-wishlist {
+  padding: 5px 10px;
+}
+
+.btn-add-cart .fa-shopping-basket {
+  padding: 0;
+  font-size: 16px;
+}

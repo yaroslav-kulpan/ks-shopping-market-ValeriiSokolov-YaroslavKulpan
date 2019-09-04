@@ -1,5 +1,6 @@
 @import "slick";
 @import "slick-theme";
+
 .slider-mini-image-wrapper {
   display: flex !important;
   justify-content: center !important;
@@ -8,6 +9,7 @@
   height: 70px;
   background: #ddd;
   opacity: .6;
+  cursor: pointer;
 }
 
 .slider-avatar-mini-img {
@@ -17,7 +19,6 @@
 
 .img-big {
   margin: 0 auto;
-  width: 492px;
   height: 415px;
 }
 
@@ -29,13 +30,25 @@
 
 .btn-control {
   position: absolute;
-  top: 11px;
+  top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 33px;
   height: 70px;
   background-color: #2a2a2a;
+  cursor: pointer;
+  transition: .3s;
+
+  &:hover {
+    color: #ca9482;
+  }
+}
+
+.action-wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
 .btn-control-prev {
@@ -49,3 +62,5 @@
 .btn-control-next {
   right: -42px;
 }
+
+@import "../btn-action/btn-action";
