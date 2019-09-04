@@ -1,8 +1,10 @@
 @import "../components/mixins";
 @import "../components/variable";
 
-.offset-0 {
-  margin-left: 0;
+@media only screen and (max-width: 992px) {
+  .offset-0 {
+    margin-left: 0;
+  }
 }
 
 .footer {
