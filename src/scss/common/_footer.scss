@@ -4,6 +4,11 @@
 .footer {
   background-color: #363636;
 
+  &-payment-image {
+    max-width: 39px;
+    height: 28px;
+  }
+
   &-heading-title {
     margin-bottom: 25px;
     font-size: 22px;
@@ -12,7 +17,26 @@
 
   &-nav {
     background-color: #2a2a2a;
+
+    &-link {
+      color: #a9a9a9;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 30px;
+    }
+
+    &-social-link {
+      color: #a1a1a1;
+      font-size: 18px;
+      font-weight: 400;
+      transition: .3s;
+
+      &:hover {
+        color: #d58e32;
+      }
+    }
   }
+
   &-copyright {
     color: #a9a9a9;
     font-size: 14px;
