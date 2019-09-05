@@ -1,1 +1,11 @@
 @import "variable";
+
+.font-dark {
+    color: $bg-dark;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

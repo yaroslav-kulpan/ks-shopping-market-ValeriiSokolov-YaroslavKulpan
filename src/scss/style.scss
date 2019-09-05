@@ -1,8 +1,11 @@
-@import "common/body";
 @import "common/header";
 @import "common/navbar";
+@import "common/header";
+@import "components/modal-basket";
+@import "common/top-menu";
 @import "section/stocks";
 @import "section/stocks_media480-768";
 @import "section/stock_media320-480";
 @import "section/furniture-gallery";
+@import "section/newsletter";
 @import "common/footer";
