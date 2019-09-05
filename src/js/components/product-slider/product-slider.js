@@ -13,6 +13,7 @@ $(document).ready(function () {
         slidesToShow: 6,
         slidesToScroll: 1,
         asNavFor: '.slider-for',
+        focusOnSelect: true,
         variableWidth: true,
         prevArrow: `<a class="btn-control btn-control-prev"><i class="fas fa-chevron-left prev fz-fa"></i></a>`,
         nextArrow: `<a class="btn-control btn-control-next"><i class="fas fa-chevron-right next fz-fa"></i></a>`,
