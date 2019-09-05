@@ -76,7 +76,7 @@
 }
 
 .banner-image-wrapper {
-  padding: 0 39px 50px 30px;
+  padding: 54px 39px 50px 30px;
 }
 
 .nav-tabs-custom .nav-link-custom {
@@ -149,11 +149,12 @@
 
 .status-wrapper {
   position: relative;
-  padding: 20px;
+  padding: 35px;
   right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 250px;
   max-width: 250px;
   box-shadow: 0 3px 6px rgba(1, 2, 2, 0.24);

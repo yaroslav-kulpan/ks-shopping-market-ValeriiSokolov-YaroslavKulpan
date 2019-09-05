@@ -20,6 +20,16 @@ $(document).ready(function () {
     });
 });
 
-$(function () {
-    $('[data-toggle="tooltip"]').tooltip()
+$(document).ready(function () {
+    $('.slides').on('setPosition', function () {
+        $(this).find('.slick-slide').height('auto');
+        let slickTrack = $(this).find('.slick-track');
+        let slickTrackHeight = $(slickTrack).height();
+        $(this).find('.slick-slide').css('height', slickTrackHeight + 'px');
+    });
+});
+$(document).ready(function () {
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    });
 });

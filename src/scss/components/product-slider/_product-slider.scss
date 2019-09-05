@@ -8,6 +8,7 @@
   width: 70px !important;
   height: 70px;
   background: #ddd;
+  outline: none;
   cursor: pointer;
   opacity: .6;
   transition: .3s;
@@ -44,10 +45,6 @@
   background-color: #2a2a2a;
   cursor: pointer;
   transition: .3s;
-
-  &:hover {
-    color: #ca9482;
-  }
 }
 
 .action-wrapper {
@@ -61,11 +58,34 @@
 }
 
 .btn-control-prev .prev, .btn-control-next .next {
+  transition: .3s;
   color: #ffffff;
+}
+
+.btn-control-prev, .btn-control-next {
+  &:hover .prev {
+    color: #ca9482;
+  }
+
+  &:hover .next {
+    color: #ca9482;
+  }
 }
 
 .btn-control-next {
   right: -42px;
+}
+
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+  display: block; /* undo display:none          */
+  height: 0; /* height:0 is also invisible */
+  overflow: hidden; /* no-overflow                */
+}
+
+.tab-content > .active,
+.pill-content > .active {
+  height: auto; /* let the content decide it  */
 }
 
 @import "../btn-action/btn-action";
