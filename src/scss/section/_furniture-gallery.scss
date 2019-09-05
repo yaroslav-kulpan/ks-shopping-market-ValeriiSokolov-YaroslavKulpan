@@ -116,16 +116,45 @@
 .status-wrapper-right {
   position: absolute;
   right: 0;
-  bottom: 30px;
+  bottom: 35px;
   background-color: #ffffff;
 }
-.price-wrapper {
-  top: 0;
+
+.item-heading-title {
+  color: #2a2a2a;
+  font-size: 16px;
+  font-weight: 700;
 }
+
+.price-wrapper {
+  top: -80%;
+  left: 50%;
+  background-color: #7b7c7c;
+  width: 105px;
+  height: 105px;
+  transform: translate(-50%);
+}
+
+.new-price {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.old-price {
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+
 .status-wrapper {
   position: relative;
   padding: 20px;
   right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
   max-width: 250px;
   box-shadow: 0 3px 6px rgba(1, 2, 2, 0.24);
 
