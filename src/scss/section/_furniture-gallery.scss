@@ -113,26 +113,44 @@
   border-bottom: 1px solid #ececed;
 }
 
+.status-wrapper-right {
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  background-color: #ffffff;
+}
+.price-wrapper {
+  top: 0;
+}
 .status-wrapper {
   position: relative;
+  padding: 20px;
+  right: 0;
+  max-width: 250px;
+  box-shadow: 0 3px 6px rgba(1, 2, 2, 0.24);
 
   &::before {
     position: absolute;
+    top: 0;
+    left: 0;
     content: '';
-    border: 30px solid transparent;
-    border-right: 30px solid aqua;
-    border-bottom: 30px solid aqua;
+    border: 15px solid transparent;
+    border-left: 15px solid #2a2a2a;
+    border-top: 15px solid #2a2a2a;
     width: 0;
     height: 0;
   }
+
   &::after {
     position: absolute;
     bottom: 0;
     right: 0;
     content: '';
-    width: 29px;
-    height: 29px;
-    background-color: #2a2a2a;
+    border: 15px solid transparent;
+    border-right: 15px solid #2a2a2a;
+    border-bottom: 15px solid #2a2a2a;
+    width: 0;
+    height: 0;
   }
 }
 
