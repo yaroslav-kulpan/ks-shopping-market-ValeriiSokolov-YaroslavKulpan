@@ -1,3 +1,15 @@
+.iCanSee1 {
+    border: 1px solid red;
+}
+
+.iCanSee2 {
+    border: 1px solid yellow;
+}
+
+.iCanSee3 {
+    border: 1px solid blue;
+}
+
 button:focus, button:active,
 input:focus, input:active {
     outline: none !important;
@@ -31,6 +43,10 @@ input:focus, input:active {
     outline: none;
 }
 
+.font-size-small {
+    font-size: 0.8rem;
+}
+
 .font-size-normal {
     font-size: 1rem;
 }
@@ -55,7 +71,7 @@ input:focus, input:active {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-    .font-size-custom {
+    .font-size-normal {
         font-size: .8rem;
     }
 }
@@ -67,17 +83,30 @@ input:focus, input:active {
 
     .top-menu .navbar-collapse {
         position: relative;
+        height: auto!important;
+    }
+
+    .top-menu .navbar-nav {
+        //margin-left: -70px;
+        background-color: $bg-dark;
+        padding-bottom: 20px;
+        padding-top: 20px;
     }
 
     .top-menu .nav-item {
         background-color: $bg-dark;
         border-top: 0 solid #2a2a2a;
         border-bottom: 1px solid transparent;
+        font-size: 0.8rem;
+
+        margin-left: 70px;
+        margin-right: 10px;
     }
 
     .top-menu .nav-link {
         color: #a0a0a0;
         border-bottom: 1px solid transparent;
+
     }
 
     .top-menu .active,
@@ -94,12 +123,70 @@ input:focus, input:active {
     }
 
     .nav-container {
-        position: absolute;
-        //border: 1px solid red;
+        //position: absolute;
     }
 
     .btn-container {
         height: 100%;
-        border: 1px solid yellow;
+    }
+}
+
+@media (max-width: 520px) {
+    .top-menu .nav-item {
+        margin-left: 40px;
+    }
+
+    .btn-container {
+        //margin-left: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .form-custom-size {
+        width: 100%!important;
+    }
+
+    .form-custom-position {
+        //padding-bottom: 4rem!important;
+        margin-right: 1rem;
+        width: 100%;
+    }
+
+    .top-menu .nav-item {
+        margin-left: 100px;
+    }
+
+    .btn-container {
+        margin-left: 0;
+        //margin-top: 5rem;
+        //margin-bottom: 5rem;
+        height: auto;
+    }
+
+    .top-menu .navbar-toggler {
+        //padding: 0!important;
+        //margin: 0!important;
+        margin-right: 10px!important;
+        margin-top: 10px!important;
+        //top: -3rem;
+    }
+
+    .top-menu .nav-container {
+        position: static!important;
+        width: 100%;
+    }
+
+    .top-menu .nav-link {
+        font-size: 1.5rem;
+    }
+
+    .top-menu .container {
+        margin-bottom: 50px;
+    }
+
+    .top-menu .navbar-nav {
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
 }
