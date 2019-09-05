@@ -91,3 +91,33 @@
 .furniture-card:hover .furniture-card-title {
   color: #d58e32;
 }
+
+.filter {
+  &-title {
+    font-size: 16px;
+  }
+
+  &-categories {
+    list-style: none;
+
+    &-text {
+cursor: pointer;
+    }
+
+    &-text:hover {
+      color: #d58e32;
+    }
+
+    &-district {
+      background-color: #2a2a2a;
+      padding: 2px 9px;
+      border-radius: 50%;
+    }
+
+    &-text:hover ~ .filter-categories-district {
+      background-color: #d58e32;
+    }
+  }
+}
+
+
