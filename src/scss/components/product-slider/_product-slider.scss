@@ -8,8 +8,13 @@
   width: 70px !important;
   height: 70px;
   background: #ddd;
-  opacity: .6;
   cursor: pointer;
+  opacity: .6;
+  transition: .3s;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .slider-avatar-mini-img {
