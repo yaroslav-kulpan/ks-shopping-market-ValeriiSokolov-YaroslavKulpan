@@ -1,5 +1,10 @@
 .banner-wrapper {
+  display: inline-block;
   background-color: #e8edf7;
+  transition: .3s;
+  :hover {
+    opacity: .9;
+  }
 }
 
 .title-module {
