@@ -2,11 +2,11 @@
 @import "../components/variable";
 
 .header {
-    background: $bg-header;
+    background-color: $bg-dark;
     color: #fff;
 }
 
-.header-contact{
+.header-contact {
     font-size: 17px;
     border-bottom: 1px solid transparent;
 }
@@ -22,15 +22,18 @@
 }
 
 .bg-logo {
-    background: $logo-color;
+    background-color: $logo-color;
 }
 
 .bg-header {
-    background: $bg-header;
+    background-color: $bg-dark;
 }
 
 .fa-shopping-basket {
     font-size: 20px;
+}
+
+.btn-basket {
     padding: 1rem 1rem 1rem 0.8rem;
 }
 
