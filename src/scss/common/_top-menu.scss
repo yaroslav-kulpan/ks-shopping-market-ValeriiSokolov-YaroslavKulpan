@@ -1,3 +1,9 @@
+button:focus, button:active,
+input:focus, input:active {
+    outline: none !important;
+    //box-shadow: none !important;
+}
+
 .top-menu {
     //color: $bg-dark;
 }
@@ -25,8 +31,12 @@
     outline: none;
 }
 
-.font-size-custom {
+.font-size-normal {
     font-size: 1rem;
+}
+
+.font-size-large {
+    font-size: 2rem;
 }
 
 .top-menu .nav-item {
@@ -85,11 +95,11 @@
 
     .nav-container {
         position: absolute;
-        border: 1px solid red;
+        //border: 1px solid red;
     }
 
     .btn-container {
+        height: 100%;
         border: 1px solid yellow;
     }
-
 }
