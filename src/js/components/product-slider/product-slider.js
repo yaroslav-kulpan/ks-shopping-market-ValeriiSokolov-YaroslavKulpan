@@ -19,3 +19,7 @@ $(document).ready(function () {
         nextArrow: `<a class="btn-control btn-control-next"><i class="fas fa-chevron-right next fz-fa"></i></a>`,
     });
 });
+
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
