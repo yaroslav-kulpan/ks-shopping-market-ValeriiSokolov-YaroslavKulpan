@@ -1,3 +1,7 @@
+.furniture-title {
+  font-size: 22px;
+}
+
 .furniture-card {
   border: none;
   background-color: #f4f5f7;
@@ -38,7 +42,7 @@
   &-hover-btn {
     background-color: #2a2a2a;
     padding: 9px 6px;
-    bottom: 136px;
+    bottom: 0;
     font-size: 14px;
   }
 
