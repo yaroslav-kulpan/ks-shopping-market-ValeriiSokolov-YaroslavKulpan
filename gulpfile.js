@@ -14,7 +14,7 @@ const autoprefixer = require('gulp-autoprefixer');			//cross-browser compatibili
 
 const imgFiles = ['./src/image/**/**.*'];
 const jsScript = ['./src/js/*.min.js'];
-const componentCss = ['./src/scss/components/*.css'];
+const componentCss = ['./src/scss/components/*.css', './src/scss/*.gif'];
 
 let cleandev = () => gulp.src('./dist', {read: false}).pipe(clean());
 let image = () => gulp.src(imgFiles).pipe(gulp.dest('./dist/image'));
