@@ -2,27 +2,53 @@
 @import "owl.theme.default.min";
 @import "../mixins";
 
-.owl-dots {
-  position: absolute;
-  top: -54px;
-  right: 0;
-  padding-left: 14px;
-  background-color: #ffffff;
+@media only screen and (max-width: 768px) {
+  .owl-dots {
+    display: none;
+  }
+  .owl-nav {
+    position: absolute;
+    display: block;
+    top: -62px;
+    right: 0;
+    padding-left: 14px;
+    background-color: #ffffff;
+  }
+  .owl-carousel .owl-nav button.owl-prev span, .owl-carousel .owl-nav button.owl-next span {
+    display: inline-block;
+    padding: 0 10px;
+    background: $primary-color;
+    color: #ffffff;
+  }
+  .owl-carousel .owl-nav button.owl-next {
+    margin-right: 0;
+  }
 }
 
-.owl-theme .owl-dots .owl-dot span {
-  width: 12px !important;
-  height: 12px !important;
-  background-color: #e2e2e2;
-  transition: .3s;
-}
+@media only screen and (min-width: 768px) {
+  .owl-dots {
+    position: absolute;
+    display: block;
+    top: -54px;
+    right: 0;
+    padding-left: 14px;
+    background-color: #ffffff;
+  }
 
-.owl-theme .owl-dots .owl-dot:last-child span {
-  margin-right: 0;
-}
+  .owl-theme .owl-dots .owl-dot span {
+    width: 12px !important;
+    height: 12px !important;
+    background-color: #e2e2e2;
+    transition: .3s;
+  }
 
-.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-  width: 12px;
-  height: 12px;
-  background-color: $secondary-color !important;
+  .owl-theme .owl-dots .owl-dot:last-child span {
+    margin-right: 0;
+  }
+
+  .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    width: 12px;
+    height: 12px;
+    background-color: $secondary-color !important;
+  }
 }
