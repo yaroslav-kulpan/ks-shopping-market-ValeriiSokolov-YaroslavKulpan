@@ -1,17 +1,18 @@
+@import "../components/mixins";
+
 .newsletters {
   background-color: #f2f2f2;
 }
 
 .text-newsletter {
-  color: #d58e32;
+  color: $secondary-color;
   font-size: 22px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .form-newsletter {
-  display: flex;
-  align-items: center;
+  @include flexAlign;
   padding-left: 65px;
   padding-bottom: 15px;
   width: 76%;
@@ -41,18 +42,18 @@
   padding-right: 14px;
   border-right: 1px solid #dddddd;
   font-size: 18px;
-  color: #d58e32;
+  color: $secondary-color;
   transform: translate(0, -50%);
 }
 
 .btn-newsletter {
   padding: 11px 15px;
-  color: #d58e32;
+  color: $secondary-color;
   font-size: 16px;
   font-weight: 400;
 
   &:hover {
-    background: #d58e32 !important;
+    background: $secondary-color !important;
     border-color: rgba(213, 142, 50, 0.61);
     color: #ffffff;
     box-shadow: 0 4px 10px rgba(1, 2, 2, .2);
@@ -66,7 +67,7 @@
   }
 
   &:active {
-    background: #d58e32 !important;
+    background: $secondary-color !important;
     border: 1px solid rgba(213, 142, 50, 0.61);
     color: #ffffff;
     box-shadow: 0 4px 10px rgba(1, 2, 2, .2);

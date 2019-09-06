@@ -1,10 +1,9 @@
 @import "slick";
 @import "slick-theme";
+@import "../mixins";
 
 .slider-mini-image-wrapper {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
+  @include flexCenter;
   width: 70px !important;
   height: 70px;
   background: #ddd;
@@ -37,12 +36,10 @@
 .btn-control {
   position: absolute;
   top: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter;
   width: 33px;
   height: 70px;
-  background-color: #2a2a2a;
+  background-color: $primary-color;
   cursor: pointer;
   transition: .3s;
 }

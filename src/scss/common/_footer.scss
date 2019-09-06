@@ -1,5 +1,4 @@
 @import "../components/mixins";
-@import "../components/variable";
 
 @media only screen and (max-width: 992px) {
   .offset-0 {
@@ -22,17 +21,17 @@
   }
 
   &-nav {
-    background-color: #2a2a2a;
+    background-color: $primary-color;
 
     &-link {
-      color: #a9a9a9;
+      color: $footer-link;
       font-size: 14px;
       font-weight: 500;
       line-height: 30px;
       transition: .3s;
 
       &:hover {
-        color: #d58e32;
+        color: $secondary-color;
       }
     }
 
@@ -43,13 +42,13 @@
       transition: .3s;
 
       &:hover {
-        color: #d58e32;
+        color: $secondary-color;
       }
     }
   }
 
   &-copyright {
-    color: #a9a9a9;
+    color: $footer-link;
     font-size: 14px;
     font-weight: 400;
   }
