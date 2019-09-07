@@ -1,0 +1,79 @@
+@import "../components/latest-blog-slider/latest-blog-slider";
+@import "../components/mixins";
+
+.card-img-wrapper {
+  height: 290px !important;
+}
+
+.card-img-blog {
+  height: 100%;
+  border-radius: 0;
+}
+
+.card-blog {
+  padding-bottom: 15rem;
+}
+
+.card-body-blog {
+  left: 50%;
+  bottom: 14%;
+  z-index: 100;
+  padding-top: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: 300px;
+  max-width: 300px;
+  transform: translate(-50%, 50%);
+}
+
+.blog-icon-calendar, .blog-icon-comments {
+  color: #676767;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.blog-icon-comments {
+  color: $primary-color;
+}
+
+.text-data {
+  color: $primary-color;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.card-title-blog {
+  color: $primary-color;
+  font-size: 16px;
+  font-weight: 500;
+  transition: .3s;
+}
+
+.blog-card-text {
+  color: #676767;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.btn-more {
+  padding: 10px 43px;
+  background-color: $primary-color;
+  border-radius: 0;
+  color: #ffffff;
+
+  &:hover, &:focus, &:active {
+    background-color: transparent !important;
+    border-color: $primary-color !important;
+    color: $primary-color !important;
+  }
+}
+
+.item:hover .card-body-blog .card-title-blog {
+  color: $secondary-color;
+}
+
+.item:hover .card-body-blog .btn-more {
+  background-color: $secondary-color;
+  color: #ffffff;
+}
