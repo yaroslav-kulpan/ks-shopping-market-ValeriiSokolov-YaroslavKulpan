@@ -1,0 +1,55 @@
+@import "../components/mixins";
+
+@media only screen and (max-width: 992px) {
+  .offset-0 {
+    margin-left: 0;
+  }
+}
+
+.footer {
+  background-color: #363636;
+
+  &-payment-image {
+    max-width: 39px;
+    height: 28px;
+  }
+
+  &-heading-title {
+    margin-bottom: 25px;
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  &-nav {
+    background-color: $primary-color;
+
+    &-link {
+      color: $footer-link;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 30px;
+      transition: .3s;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+
+    &-social-link {
+      color: #a1a1a1;
+      font-size: 18px;
+      font-weight: 400;
+      transition: .3s;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  &-copyright {
+    color: $footer-link;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
