@@ -61,6 +61,7 @@
   background-color: $primary-color;
   border-radius: 0;
   color: #ffffff;
+  text-transform: capitalize;
 
   &:hover, &:focus, &:active {
     background-color: transparent !important;
