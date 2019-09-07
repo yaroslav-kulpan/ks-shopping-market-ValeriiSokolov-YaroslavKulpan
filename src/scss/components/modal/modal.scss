@@ -1,6 +1,15 @@
 @import "../mixins";
+
+.modal {
+  padding-right: 0 !important;
+}
+
+.modal-dialog {
+  max-width: 456px !important;
+}
+
 .modal-content-custom {
-  max-width: 456px;
+  max-width: 456px !important;
   padding: 0 30px;
   border-radius: 0;
   box-shadow: 0 4px 4px rgba(1, 2, 2, 0.2);
@@ -16,17 +25,18 @@
 .close-modal {
   top: 0;
   right: 0;
-  background-color: $primary-color !important;
   padding: 11px 16px !important;
-  opacity: 1;
-  font-size: 14px;
+  background-color: $primary-color !important;
   color: #fff;
+  font-size: 14px;
+  opacity: 1;
+  transition: .3s;
 }
 
 .close-modal:hover {
-  background: $primary-color !important;
+  background: $secondary-color !important;
   color: #ffffff;
-  opacity: .1;
+  opacity: 1 !important;
 }
 
 .form-control-custom {
