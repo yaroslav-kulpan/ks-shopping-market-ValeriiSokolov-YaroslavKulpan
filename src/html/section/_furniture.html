@@ -308,11 +308,9 @@
         </div>
         <div class="d-none d-lg-block col-lg-3">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 mb-4">
                     <h4 class="text-uppercase m-0 font-weight-bold filter-title">filter by categories</h4>
                     <hr class="bg-dark">
-                    <!--<div class="row">-->
-                    <!--<div class="col-6">-->
                     <ul class="p-0 filter-categories ">
                         <li class="mb-3 d-flex justify-content-between align-items-center">
                             <span class="filter-categories-text">> Furniture</span>
@@ -336,29 +334,97 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-12">
+                <div class="col-12 mt-4 mb-2">
                     <h4 class="text-uppercase m-0 font-weight-bold filter-title">filter by price</h4>
                     <hr class="bg-dark">
-
+                    <div class="filter-by-price d-flex flex-column mt-4">
+                        <input id="ex12c" type="text"/>
+                        <div class="d-flex justify-content-between my-4">
+                            <a href=""
+                               class="btn-filter d-inline-block text-uppercase px-2 py-1 text-decoration-none text-white">filter</a>
+                            <span class="filtered-range text-center px-2 py-1 font-weight-bold" id="rangeValue">$135 - $500</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 my-4">
                     <h4 class="text-uppercase m-0 font-weight-bold filter-title">filter by color</h4>
                     <hr class="bg-dark">
-
+                    <div class="custom-control custom-checkbox mt-4 mb-2 ">
+                        <input type="checkbox" class="custom-control-input" id="customCheckRed">
+                        <label class="custom-control-label checkbox-red" for="customCheckRed">Red</label>
+                    </div>
+                    <div class="custom-control custom-checkbox my-2">
+                        <input type="checkbox" class="custom-control-input" id="customCheckBlack">
+                        <label class="custom-control-label checkbox-black" for="customCheckBlack">Black</label>
+                    </div>
+                    <div class="custom-control custom-checkbox my-2">
+                        <input type="checkbox" class="custom-control-input" id="customCheckYellow">
+                        <label class="custom-control-label checkbox-yellow" for="customCheckYellow">Yellow</label>
+                    </div>
+                    <div class="custom-control custom-checkbox my-2">
+                        <input type="checkbox" class="custom-control-input" id="customCheckBlue">
+                        <label class="custom-control-label checkbox-blue" for="customCheckBlue">Blue</label>
+                    </div>
+                    <div class="custom-control custom-checkbox my-2">
+                        <input type="checkbox" class="custom-control-input" id="customCheckPink">
+                        <label class="custom-control-label checkbox-pink" for="customCheckPink">Pink</label>
+                    </div>
+                    <div class="custom-control custom-checkbox my-2">
+                        <input type="checkbox" class="custom-control-input" id="customCheckGreen">
+                        <label class="custom-control-label checkbox-green" for="customCheckGreen">Green</label>
+                    </div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 my-4">
                     <h4 class="text-uppercase m-0 font-weight-bold filter-title">filter by size</h4>
                     <hr class="bg-dark">
+                    <div class="custom-control custom-checkbox mt-4 mb-2 d-flex justify-content-between">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label checkbox-default" for="customCheck1">S</label>
+                        <span class="filter-categories-district text-white ">3</span>
 
+                    </div>
+                    <div class="custom-control custom-checkbox my-2 d-flex justify-content-between">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                        <label class="custom-control-label checkbox-default" for="customCheck2">M</label>
+                        <span class="filter-categories-district text-white ">3</span>
+
+                    </div>
+                    <div class="custom-control custom-checkbox my-2 d-flex justify-content-between">
+                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                        <label class="custom-control-label checkbox-default" for="customCheck3">L</label>
+                        <span class="filter-categories-district text-white ">3</span>
+
+                    </div>
+                    <div class="custom-control custom-checkbox my-2 d-flex justify-content-between">
+                        <input type="checkbox" class="custom-control-input" id="customCheck4">
+                        <label class="custom-control-label checkbox-default" for="customCheck4">XL</label>
+                        <span class="filter-categories-district text-white ">3</span>
+
+                    </div>
+                    <div class="custom-control custom-checkbox my-2 d-flex justify-content-between">
+                        <input type="checkbox" class="custom-control-input" id="customCheck5">
+                        <label class="custom-control-label checkbox-default" for="customCheck5">XX</label>
+                        <span class="filter-categories-district text-white ">3</span>
+                    </div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 mt-4">
                     <h4 class="text-uppercase m-0 font-weight-bold filter-title">filter by tags</h4>
-                    <hr class="bg-dark">
+                    <hr class="bg-dark ">
+                    <div class="d-flex pt-3 flex-wrap">
+                        <a href="#" class="tag px-3 py-2 mr-2 mb-2 text-decoration-none"><i class="fas fa-tags"></i>Table</a>
+                        <a href="#" class="tag px-3 py-2 mr-2 mb-2 text-decoration-none"><i class="fas fa-tags">Chair</i></a>
+                        <a href="#" class="tag px-3 py-2 mr-2 mb-2 text-decoration-none"><i class="fas fa-tags">Hand Bag</i></a>
+                        <a href="#" class="tag px-3 py-2 mr-2 mb-2 text-decoration-none"><i class="fas fa-tags">Women</i></a>
+                        <a href="#" class="tag px-3 py-2 mr-2 mb-2 text-decoration-none"><i class="fas fa-tags">Fashion</i></a>
+                        <a href="#" class="tag px-3 py-2 mr-2 mb-2 text-decoration-none"><i class="fas fa-tags">Closes</i></a>
+                    </div>
 
                 </div>
             </div>
 
         </div>
+
+    </div>
     </div>
     </div>
 </section>
