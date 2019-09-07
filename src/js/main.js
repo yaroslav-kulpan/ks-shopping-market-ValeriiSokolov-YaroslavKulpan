@@ -3,5 +3,8 @@
 //= components/modal-basket.js
 //= components/product-slider/product-slider.js
 //= components/furniture-filters/filter-by-price.js
+//= components/furniture-filters/filter-by-categories.js
+//= components/furniture-filters/filter-by-tags.js
+//= components/furniture-filters/more-products.js
 //= components/latest-blog-slider/latest-blog-slider.js
 //= common/top-menu.js
