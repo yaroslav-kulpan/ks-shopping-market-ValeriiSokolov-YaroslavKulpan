@@ -1,13 +1,15 @@
+@import "../mixins";
+
 .btn-wishlist, .btn-add-cart, .btn-viewed, .btn-compare {
   padding: 5px 9px;
-  border: 1px solid #2a2a2a;
+  border: 1px solid $primary-color;
   border-radius: 0;
-  color: #2a2a2a;
+  color: $primary-color;
   font-size: 16px;
 
   &:hover {
-    border: 1px solid #d58e32;
-    color: #d58e32;
+    border: 1px solid $secondary-color;
+    color: $secondary-color;
   }
 }
 

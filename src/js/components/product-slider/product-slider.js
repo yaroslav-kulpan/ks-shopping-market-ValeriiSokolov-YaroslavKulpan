@@ -4,14 +4,16 @@ $(document).ready(function () {
     $('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
+        lazyLoad: true,
         arrows: false,
         asNavFor: '.slider-nav',
     });
     $('.slider-nav').slick({
-        // autoplay: true,
-        // autoplaySpeed: 7000,
+        autoplay: true,
+        autoplaySpeed: 9000,
         slidesToShow: 6,
         slidesToScroll: 1,
+        lazyLoad: true,
         asNavFor: '.slider-for',
         focusOnSelect: true,
         variableWidth: true,

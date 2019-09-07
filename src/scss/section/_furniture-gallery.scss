@@ -1,3 +1,5 @@
+@import "../components/mixins";
+
 .banner-wrapper {
   display: inline-block;
   background-color: #e8edf7;
@@ -14,14 +16,14 @@
   padding-bottom: 10px;
   font-size: 20px;
   font-weight: 700;
-  color: #d58e32;
+  color: $secondary-color;
   text-transform: uppercase;
 }
 
 .title-module::before {
   content: "";
-  left: 0;
   position: absolute;
+  left: 0;
   right: 0;
   bottom: 0;
   width: 100%;
@@ -35,7 +37,7 @@
   right: 0;
   bottom: 0;
   width: 44px;
-  border-bottom: 2px solid #d58e32;
+  border-bottom: 2px solid $secondary-color;
 }
 
 .banner-call-to-action {
@@ -56,7 +58,7 @@
 }
 
 .banner-heading-title {
-  color: #d58e32;
+  color: $secondary-color;
   font-size: 48px;
   font-weight: 700;
 }
@@ -93,7 +95,7 @@
 .nav-tabs-custom .nav-link.active {
   position: relative;
   background-color: #f5f6f7;
-  color: #d58e32;
+  color: $secondary-color;
 }
 
 .nav-tabs-custom .nav-link.active::after {
@@ -103,7 +105,7 @@
   left: 0;
   right: 0;
   width: 100%;
-  border-top: 3px solid #d58e32;
+  border-top: 3px solid $secondary-color;
 }
 
 .tab-content-custom {
@@ -121,7 +123,7 @@
 }
 
 .item-heading-title {
-  color: #2a2a2a;
+  color: $primary-color;
   font-size: 16px;
   font-weight: 700;
 }
@@ -151,10 +153,7 @@
   position: relative;
   padding: 35px;
   right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  @include flexColumnCenter;
   width: 250px;
   max-width: 250px;
   box-shadow: 0 3px 6px rgba(1, 2, 2, 0.24);
@@ -164,11 +163,11 @@
     top: 0;
     left: 0;
     content: '';
-    border: 15px solid transparent;
-    border-left: 15px solid #2a2a2a;
-    border-top: 15px solid #2a2a2a;
     width: 0;
     height: 0;
+    border: 15px solid transparent;
+    border-left: 15px solid $primary-color;
+    border-top: 15px solid $primary-color;
   }
 
   &::after {
@@ -176,11 +175,11 @@
     bottom: 0;
     right: 0;
     content: '';
-    border: 15px solid transparent;
-    border-right: 15px solid #2a2a2a;
-    border-bottom: 15px solid #2a2a2a;
     width: 0;
     height: 0;
+    border: 15px solid transparent;
+    border-right: 15px solid $primary-color;
+    border-bottom: 15px solid $primary-color;
   }
 }
 
