@@ -9,8 +9,8 @@ $(document).ready(function () {
         asNavFor: '.slider-nav',
     });
     $('.slider-nav').slick({
-        // autoplay: true,
-        // autoplaySpeed: 9000,
+        autoplay: true,
+        autoplaySpeed: 9000,
         slidesToShow: 6,
         slidesToScroll: 1,
         lazyLoad: true,
