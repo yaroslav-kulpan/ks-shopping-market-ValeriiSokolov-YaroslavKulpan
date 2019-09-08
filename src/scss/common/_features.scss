@@ -1,0 +1,30 @@
+.font-size-26 {
+    font-size: 26px;
+}
+
+.feature {
+
+}
+
+.feature:hover {
+    color: rgba(213, 142, 50, 0.5);
+}
+
+.feature:hover .fas {
+    color: white;
+}
+
+.feature:hover .feature-absolute-center {
+    border: 1px solid $logo-color!important;
+}
+
+.feature:hover .feature-icon-background {
+    background-color: $logo-color;
+    border: 1px solid $logo-color!important;
+}
+
+.feature-absolute-center {
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+}
