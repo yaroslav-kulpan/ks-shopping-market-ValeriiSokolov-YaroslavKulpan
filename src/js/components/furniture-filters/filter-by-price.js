@@ -3,5 +3,5 @@ let value = $("#ex12c").slider('getValue');
 $('#rangeValue').text(`$${value[0]} - ${value[1]}`);
 $("#ex12c").slider().on('slide', function () {
     let value = $("#ex12c").slider('getValue');
-    $('#rangeValue').text(`${value[0]} - ${value[1]}`);
+    $('#rangeValue').text(`$${value[0]} - ${value[1]}`);
 });
