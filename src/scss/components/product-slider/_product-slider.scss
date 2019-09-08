@@ -51,7 +51,7 @@
 }
 
 .btn-control-prev {
-  left: -41px;
+  left: -37px;
 }
 
 .btn-control-prev .prev, .btn-control-next .next {
@@ -70,19 +70,19 @@
 }
 
 .btn-control-next {
-  right: -42px;
+  right: -38px;
 }
 
 .tab-content > .tab-pane,
 .pill-content > .pill-pane {
-  display: block; /* undo display:none          */
-  height: 0; /* height:0 is also invisible */
-  overflow: hidden; /* no-overflow                */
+  display: block;
+  height: 0;
+  overflow: hidden;
 }
 
 .tab-content > .active,
 .pill-content > .active {
-  height: auto; /* let the content decide it  */
+  height: auto;
 }
 
 @import "../btn-action/btn-action";
