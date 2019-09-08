@@ -1,0 +1,101 @@
+/* Make the image fully responsive */
+.carousel-inner img {
+    //width: 100%;
+    height: 100%;
+}
+
+.mt-n10 {
+    margin-top: -95px;
+}
+
+.carousel-item-custom {
+    height: 600px;
+    //height: 100%;
+    //min-height: 300px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+}
+
+.wrap-carousel-control {
+
+}
+
+.bottom {
+    bottom: 0;
+}
+
+.left {
+    left: 0;
+}
+
+.carousel-control-custom {
+    background-color: $bg-dark;
+    opacity: 1;
+}
+
+.carousel-control-custom:hover {
+    background-color: $logo-color;
+    opacity: 1;
+}
+
+.jumbotron-custom {
+    z-index: 1;
+    background-color: rgba(00, 00, 00, 0.5);
+    transform: translateY(120%);
+}
+
+.btn-custom {
+    top: 195%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 992px) {
+    //.carousel-item-height {
+    //    height: 475px;
+    //}
+    //
+    //.jumbotron-custom {
+    //    transform: translateY(75%);
+    //}
+}
+
+@media (min-width: 576px) {
+    .btn-custom {
+        top: 195%!important;
+        padding: 1.5rem 3rem!important;
+    }
+
+    .jumbotron-custom {
+        transform: translateY(120%)!important;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-custom {
+        top: 155%;
+        padding: 1rem 2rem;
+    }
+
+    .jumbotron-custom {
+        transform: translateY(180%);
+    }
+
+}
+
+//@media (min-width: 425px) and (max-width: 576px) {
+//    .jumbotron-custom {
+//        transform: translateY(180%);
+//    }
+//}
+
+@media (max-width: 425px) {
+    .btn-custom {
+        top: 133%;
+        padding: 1rem 2rem!important;
+    }
+
+    .jumbotron-custom {
+        transform: translateY(135%);
+    }
+}

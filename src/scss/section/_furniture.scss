@@ -102,6 +102,9 @@
 
     &-text {
 cursor: pointer;
+      &-active {
+        color: #d58e32;
+      }
     }
 
     &-text:hover {
@@ -112,12 +115,132 @@ cursor: pointer;
       background-color: #2a2a2a;
       padding: 2px 9px;
       border-radius: 50%;
+    &-active {
+      background-color: #d58e32;
+    ;
+    }
     }
 
     &-text:hover ~ .filter-categories-district {
       background-color: #d58e32;
     }
+
+
   }
 }
 
+.slider-selection {
+  background: #2a2a2a;
+}
+.slider-handle {
+  border: 3px solid #d58e32;
+  background: #ffffff;
+}
 
+.slider-track-high, .slider-track-low {
+  background: #ffffff;
+  border: 1px solid #D4D4D4;
+}
+
+.btn-filter {
+  letter-spacing: 1px;
+background-color: #2a2a2a;
+}
+
+.btn-filter:hover {
+  background-color: #d58e32;
+}
+
+.slider.slider-horizontal {
+  width: 100%;
+}
+
+.filtered-range {
+  color: #2A2A2A;
+  border: 1px solid #D4D4D4;
+}
+
+.custom-control-label {
+  padding-left: 5px;
+  font-weight: 600;
+  color: #2A2A2A;
+}
+
+.custom-checkbox .custom-control-input ~ .checkbox-red::before {
+  background-color: #FA5F66!important;
+  border: none;
+}
+
+.custom-checkbox .custom-control-input ~ .checkbox-black::before {
+  background-color: #454545!important;
+  border: none;
+}
+
+.custom-checkbox .custom-control-input ~ .checkbox-yellow::before {
+  background-color: #E9E600!important;
+  border: none;
+}
+
+.custom-checkbox .custom-control-input ~ .checkbox-blue::before {
+  background-color: #0190D3!important;
+  border: none;
+}
+
+.custom-checkbox .custom-control-input ~ .checkbox-pink::before {
+  background-color: #F72FE4!important;
+  border: none;
+}
+
+.custom-checkbox .custom-control-input ~ .checkbox-green::before {
+  background-color: #14D400!important;
+  border: none;
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label {
+  color: #d58e32;
+}
+.custom-checkbox .custom-control-input:focus ~ .checkbox-default::before {
+  border: 1px solid #2A2A2A;
+}
+
+.custom-checkbox .custom-control-input ~ .checkbox-default::before {
+  border: 1px solid #2A2A2A;
+}
+
+.custom-checkbox .custom-control-input:checked ~ .checkbox-default::before {
+  background-color: #d58e32;
+  border: none;
+}
+
+.custom-checkbox >.custom-control-input:checked ~ .filter-categories-district {
+  background-color: #d58e32;
+}
+
+.custom-checkbox .custom-control-input:checked:focus ~ .custom-control-label::before {
+border: none;
+  box-shadow: none;
+}
+
+.custom-checkbox .custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: none;
+}
+
+.tag {
+  font-weight: 600;
+color: #959595;
+  border: 1px solid #D7D7D7;
+}
+
+.tag-active {
+  color: #d58e32;
+  border-color: #d58e32;
+}
+
+.tag:hover {
+  color: #d58e32;
+  border-color: #d58e32;
+}
+
+.mobile-padding {
+margin: 0 18vw;
+}
