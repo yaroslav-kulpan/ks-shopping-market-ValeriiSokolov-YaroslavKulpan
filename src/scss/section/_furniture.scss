@@ -101,7 +101,8 @@
     list-style: none;
 
     &-text {
-cursor: pointer;
+      cursor: pointer;
+
       &-active {
         color: #d58e32;
       }
@@ -115,10 +116,10 @@ cursor: pointer;
       background-color: #2a2a2a;
       padding: 2px 9px;
       border-radius: 50%;
-    &-active {
-      background-color: #d58e32;
-    ;
-    }
+
+      &-active {
+        background-color: #d58e32;;
+      }
     }
 
     &-text:hover ~ .filter-categories-district {
@@ -132,6 +133,7 @@ cursor: pointer;
 .slider-selection {
   background: #2a2a2a;
 }
+
 .slider-handle {
   border: 3px solid #d58e32;
   background: #ffffff;
@@ -144,7 +146,7 @@ cursor: pointer;
 
 .btn-filter {
   letter-spacing: 1px;
-background-color: #2a2a2a;
+  background-color: #2a2a2a;
 }
 
 .btn-filter:hover {
@@ -167,38 +169,39 @@ background-color: #2a2a2a;
 }
 
 .custom-checkbox .custom-control-input ~ .checkbox-red::before {
-  background-color: #FA5F66!important;
+  background-color: #FA5F66 !important;
   border: none;
 }
 
 .custom-checkbox .custom-control-input ~ .checkbox-black::before {
-  background-color: #454545!important;
+  background-color: #454545 !important;
   border: none;
 }
 
 .custom-checkbox .custom-control-input ~ .checkbox-yellow::before {
-  background-color: #E9E600!important;
+  background-color: #E9E600 !important;
   border: none;
 }
 
 .custom-checkbox .custom-control-input ~ .checkbox-blue::before {
-  background-color: #0190D3!important;
+  background-color: #0190D3 !important;
   border: none;
 }
 
 .custom-checkbox .custom-control-input ~ .checkbox-pink::before {
-  background-color: #F72FE4!important;
+  background-color: #F72FE4 !important;
   border: none;
 }
 
 .custom-checkbox .custom-control-input ~ .checkbox-green::before {
-  background-color: #14D400!important;
+  background-color: #14D400 !important;
   border: none;
 }
 
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label {
   color: #d58e32;
 }
+
 .custom-checkbox .custom-control-input:focus ~ .checkbox-default::before {
   border: 1px solid #2A2A2A;
 }
@@ -212,12 +215,12 @@ background-color: #2a2a2a;
   border: none;
 }
 
-.custom-checkbox >.custom-control-input:checked ~ .filter-categories-district {
+.custom-checkbox > .custom-control-input:checked ~ .filter-categories-district {
   background-color: #d58e32;
 }
 
 .custom-checkbox .custom-control-input:checked:focus ~ .custom-control-label::before {
-border: none;
+  border: none;
   box-shadow: none;
 }
 
@@ -227,7 +230,7 @@ border: none;
 
 .tag {
   font-weight: 600;
-color: #959595;
+  color: #959595;
   border: 1px solid #D7D7D7;
 }
 
@@ -241,6 +244,23 @@ color: #959595;
   border-color: #d58e32;
 }
 
+.show-more-btn {
+  color: #2A2A2A;
+  padding: 6px 13px 8px 13px;
+  font-size: 24px;
+  background-color: #eeeeee;
+  border-radius: 50%;
+}
+
+.show-more-btn:hover {
+  color: #d58e32;
+}
+
 .mobile-padding {
-margin: 0 18vw;
+  margin: 0 18vw;
+}
+
+.show-filters {
+  border: 1px solid #D4D4D4;
+  color: #2A2A2A;
 }

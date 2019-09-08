@@ -6,15 +6,20 @@ $(document).ready(function () {
 $(window).resize(function () {
     showProducts();
     mobileResize();
+    if ($('.card-container:hidden').length < 1) {
+        $('#btnShowMore').hide();
+    }else{
+        $('#btnShowMore').show();
+    }
 });
 
 
-
 $(document).ready(function () {
-    $('#btnShowMore').click(function () {
-        if (document.documentElement.clientWidth > 768) {
+    $('#btnShowMore').click(function (e) {
+        e.preventDefault();
+        if (document.documentElement.clientWidth >= 768) {
             $('.card-container:hidden').slice(0, 9).show()
-        } else if (document.documentElement.clientWidth <= 768 && document.documentElement.clientWidth > 480) {
+        } else if (document.documentElement.clientWidth < 768 && document.documentElement.clientWidth > 480) {
             $('.card-container:hidden').slice(0, 4).show()
 
         } else {
@@ -28,9 +33,9 @@ $(document).ready(function () {
 
 function showProducts(){
     $('.card-container').hide();
-    if (document.documentElement.clientWidth > 768) {
+    if (document.documentElement.clientWidth >= 768) {
         $('.card-container').slice(0, 9).show();
-    } else if (document.documentElement.clientWidth <= 768 && document.documentElement.clientWidth > 480) {
+    } else if (document.documentElement.clientWidth < 768 && document.documentElement.clientWidth > 480) {
         $('.card-container').slice(0, 4).show();
     } else {
         $('.card-container').slice(0, 3).show();
