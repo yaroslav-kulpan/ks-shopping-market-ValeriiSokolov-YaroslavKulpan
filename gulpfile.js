@@ -10,7 +10,6 @@ const rename = require('gulp-rename');						//rename files after minify
 const concat = require('gulp-concat');						//concat for js
 const terser = require('gulp-terser');						//minify for js
 const autoprefixer = require('gulp-autoprefixer');			//cross-browser compatibility css
-// const imagemin = require('gulp-imagemin');
 
 const imgFiles = ['./src/image/**/**.*'];
 const jsScript = ['./src/js/*.min.js'];
