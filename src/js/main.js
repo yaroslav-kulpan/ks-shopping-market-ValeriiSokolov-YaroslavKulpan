@@ -1,7 +1,9 @@
 //= common/new.js
+//= components/product-list.js
 //= components/modal/modal.js
 //= components/modal-basket.js
 //= components/product-slider/product-slider.js
+//= components/create-products.js
 //= components/furniture-filters/filter-by-price.js
 //= components/furniture-filters/filter-by-categories.js
 //= components/furniture-filters/filter-by-tags.js
