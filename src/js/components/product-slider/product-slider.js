@@ -4,9 +4,33 @@ $(document).ready(function () {
     $('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
+        infinite: true,
         lazyLoad: true,
         arrows: false,
         asNavFor: '.slider-nav',
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }]
     });
     $('.slider-nav').slick({
         autoplay: true,

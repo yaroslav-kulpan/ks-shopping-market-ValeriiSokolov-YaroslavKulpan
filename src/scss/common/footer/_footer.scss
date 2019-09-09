@@ -1,4 +1,4 @@
-@import "../components/mixins";
+@import "../../components/mixins";
 
 @media only screen and (max-width: 992px) {
   .offset-0 {
@@ -53,3 +53,8 @@
     font-weight: 400;
   }
 }
+
+@import "media/footer-breakpoint-767";
+@import "media/footer-breakpoint-531";
+@import "media/footer-breakpoint-454";
+@import "media/footer-breakpoint-341";

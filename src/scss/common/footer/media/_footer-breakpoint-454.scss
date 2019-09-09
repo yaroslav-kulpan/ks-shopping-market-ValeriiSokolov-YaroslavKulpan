@@ -1,0 +1,14 @@
+@media only screen and (max-width: 454px) {
+  .footer-copyright {
+    font-size: 12px;
+  }
+  .col-xs-small {
+    flex: 0 0 100%;
+    max-width: 100%;
+    @include flexCenter;
+
+    &:last-child {
+      margin-top: 1rem;
+    }
+  }
+}
