@@ -26,3 +26,9 @@
   transform: translate(-50%);
   border-bottom: 1px solid #fff;
 }
+
+@media only screen and (max-width: 363px) {
+  .nav-currency, .nav-language, .nav-top-link {
+    font-size: 11px;
+  }
+}

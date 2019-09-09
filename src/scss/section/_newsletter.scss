@@ -73,3 +73,9 @@
     box-shadow: 0 4px 10px rgba(1, 2, 2, .2);
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .form-newsletter {
+    width: 100%;
+  }
+}

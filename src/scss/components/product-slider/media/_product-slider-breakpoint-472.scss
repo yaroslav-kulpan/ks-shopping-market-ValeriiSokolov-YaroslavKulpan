@@ -1,0 +1,27 @@
+@media only screen and (max-width: 472px) {
+  .slider-wrapper-control {
+    width: 78%;
+  }
+  .img-big {
+    width: 100%;
+  }
+  .status-wrapper {
+    padding: 20px;
+    width: 200px;
+    max-width: 200px;
+  }
+  .price-wrapper {
+    width: 80px;
+    height: 80px;
+  }
+  .new-price {
+    font-size: 16px;
+  }
+  .old-price {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  .btn-add-cart, .btn-compare, .btn-viewed, .btn-wishlist {
+    background-color: #f5f6f7;
+  }
+}

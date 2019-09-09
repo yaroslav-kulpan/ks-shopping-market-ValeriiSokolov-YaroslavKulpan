@@ -1,0 +1,10 @@
+@media only screen and (max-width: 341px) {
+  .footer {
+    &-payment-image {
+      max-width: 34px;
+    }
+  }
+  .payment-sm-small {
+    margin-bottom: 0;
+  }
+}

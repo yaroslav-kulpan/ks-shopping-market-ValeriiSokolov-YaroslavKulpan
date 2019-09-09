@@ -1,4 +1,4 @@
-@import "../components/mixins";
+@import "../../components/mixins";
 
 .banner-wrapper {
   display: inline-block;
@@ -183,4 +183,8 @@
   }
 }
 
-@import "../components/product-slider/product-slider";
+@import "media/furniture-gallery-breakpoint-767";
+@import "media/furniture-gallery-breakpoint-538";
+@import "media/furniture-gallery-breakpoint-472";
+
+@import "../../components/product-slider/product-slider";
