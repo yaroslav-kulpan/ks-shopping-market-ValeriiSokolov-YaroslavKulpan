@@ -1,6 +1,10 @@
 @import "../components/mixins";
 @import "../components/variable";
 
+.font-dark {
+    color: $bg-dark;
+}
+
 .header {
     background-color: $bg-dark;
     color: #fff;
