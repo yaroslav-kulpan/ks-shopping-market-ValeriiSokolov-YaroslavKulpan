@@ -1,61 +1,63 @@
-<nav class="shadow top-menu navbar navbar-expand-md p-0 bg-white">
-  <div class="container position-relative p-0">
-    <form class="form-custom-position form-inline position-relative ml-3 ml-md-0 py-4">
-      <input class="form-control form-control-lg form-search rounded-0 border-dark form-custom-size pr-5" type="search"
+<nav class="top-menu position-absolute right left navbar py-0 navbar-expand-md bg-white shadow">
+  <div class="container position-relative">
+    <form class="form-inline position-relative form-custom-position pt-2 pt-md-3 pb-5 pb-md-3">
+      <input class="form-control form-control-lg form-search rounded-0 border-dark form-custom-size pr-5"
+             type="search"
              placeholder="Search products..."
              aria-label="Search">
       <button class="btn btn-search position-absolute right" type="submit">
         <i class="fa fa-search" aria-hidden="true"></i>
       </button>
     </form>
-    <div class="nav-container h-100 bubble position-absolute right top">
+    <div class="nav-container h-100 bubble position-absolute right top ">
       <div class="btn-container position-relative bubble">
-        <button class="navbar-toggler position-absolute right p-1 mt-5 mb-3 ml-5 mr-3" type="button" data-toggle="collapse"
-                data-target="#collapsibleNavbar">
-          <span class="bg-header">
-            <span class="bg-header navbar-toggler-icon d-block toggler-height "></span>
-            <span class="bg-header navbar-toggler-icon d-block toggler-height my-1"></span>
-            <span class="bg-header navbar-toggler-icon d-block toggler-height "></span>
-          </span>
-          <span class="bg-header navbar-toggler-icon d-none mt-n2"><i class="font-size-large fas fa-times"></i></span>
+        <button class="navbar-toggler position-absolute right" type="button"
+                data-toggle="collapse"
+                data-target="#navbar">
+          <span class="navbar-toggler-icon"><i class="font-dark font-size-large fas fa-bars"></i></span>
+<!--          <span class="bg-header navbar-toggler-icon d-none"><i class="font-size-large fas fa-times"></i></span>-->
         </button>
       </div>
-      <div class="collapse navbar-collapse h-100" id="collapsibleNavbar">
+      <div class="collapse navbar-collapse h-100" id="navbar">
         <ul class="navbar-nav ml-auto text-uppercase h-100">
           <li class="nav-item menu-item text-right h-100 d-table font-size-normal active">
             <a
               class="nav-link menu-link font-weight-bold font-dark d-table-cell align-middle h-100 pt-3 pb-2 py-md-0 pr-2 px-md-2 px-lg-3"
-              href="#">Home
-              <!--            <span class="sr-only">(current)</span>-->
+              href="#begin">Home
             </a>
           </li>
           <li class="nav-item menu-item text-right h-100 d-table font-size-normal">
             <a
               class="nav-link menu-link font-weight-bold d-table-cell align-middle font-dark h-100 pt-3 pb-2 py-md-0 pr-2 px-md-2 px-lg-3"
-              href="#">slider</a>
+              href="#topSlider">slider</a>
           </li>
           <li class="nav-item menu-item text-right h-100 d-table font-size-normal">
             <a
               class="nav-link menu-link font-weight-bold d-table-cell align-middle font-dark h-100 pt-3 pb-2 py-md-0 pr-2 px-md-2 px-lg-3"
-              href="#">features</a>
+              href="#features">features</a>
           </li>
           <li class="nav-item text-right h-100 d-table font-size-normal">
             <a
               class="nav-link menu-link font-weight-bold d-table-cell align-middle font-dark h-100 pt-3 pb-2 py-md-0 pr-2 px-md-2 px-lg-3"
-              href="#">stocks</a>
+              href="#stocks">stocks</a>
           </li>
           <li class="nav-item text-right h-100 d-table font-size-normal">
             <a
               class="nav-link menu-link font-weight-bold d-table-cell align-middle font-dark h-100 pt-3 pb-2 py-md-0 pr-2 px-md-2 px-lg-3"
-              href="#">products</a>
+              href="#products">products</a>
           </li>
           <li class="nav-item text-right h-100 d-table font-size-normal">
             <a
               class="nav-link menu-link font-weight-bold d-table-cell align-middle font-dark h-100 pt-3 pb-2 py-md-0 pr-2 px-md-2 px-lg-3"
-              href="#">blog</a>
+              href="#blog">blog</a>
           </li>
         </ul>
       </div>
     </div>
+    <a href="#begin" class="go-top">
+      <i class="fas fa-angle-double-up"></i>
+      <span>Go top</span>
+      <i class="fas fa-angle-double-up"></i>
+    </a>
   </div>
 </nav>

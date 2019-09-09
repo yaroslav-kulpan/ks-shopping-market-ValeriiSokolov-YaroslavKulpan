@@ -1,13 +1,33 @@
-.iCanSee1 {
-    border: 1px solid red;
+.go-top {
+    position: fixed;
+    bottom: 11vh;
+    right: -8.5rem;
+    width: max-content;
+    background-color: rgba(225, 225, 225, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    color: $bg-dark;
+    transition: all 100ms;
+    z-index: 1000;
 }
 
-.iCanSee2 {
-    border: 1px solid yellow;
+.go-top > * {
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-.iCanSee3 {
-    border: 1px solid blue;
+.go-top.active {
+    right: 10px;
+}
+
+.go-top:hover {
+    cursor: pointer;
+    color: $logo-color;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(225, 225, 225, 0.5);
+    text-decoration: none;
 }
 
 button:focus, button:active,
@@ -19,7 +39,7 @@ input:focus, input:active {
 .top-menu {
     //color: $bg-dark;
     z-index: 5;
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.5)!important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5) !important;
 }
 
 .right {
@@ -33,8 +53,9 @@ input:focus, input:active {
 .toggler-width {
     width: $toggler-width;
 }
+
 .form-custom-size {
-    width: $navbar-search-width!important;
+    width: $navbar-search-width !important;
 }
 
 .toggler-height {
@@ -61,7 +82,7 @@ input:focus, input:active {
     border-top: 4px solid transparent;
 }
 
-.top-menu .active,
+.top-menu .nav-item.active,
 .top-menu .nav-item:hover {
     background-color: $logo-color;
     border-top: 4px solid #2a2a2a;
@@ -78,14 +99,18 @@ input:focus, input:active {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.98px) {
+    .go-top {
+        display: none;
+    }
+
     .bubble {
         z-index: 10;
     }
 
     .top-menu .navbar-collapse {
         position: relative;
-        height: auto!important;
+        height: auto !important;
     }
 
     .top-menu .navbar-nav {
@@ -111,7 +136,7 @@ input:focus, input:active {
 
     }
 
-    .top-menu .active,
+    .top-menu .nav-item.active,
     .top-menu .nav-item:hover {
         background-color: $bg-dark;
         border-top: 0 solid #2a2a2a;
@@ -143,15 +168,21 @@ input:focus, input:active {
     }
 }
 
+@media (min-width: 576px) {
+    //.container {
+    //    max-width: 540px;
+    //}
+}
+
 @media (max-width: 480px) {
 
     .form-custom-size {
-        width: 100%!important;
+        width: 100% !important;
     }
 
     .form-custom-position {
         //padding-bottom: 4rem!important;
-        margin-right: 1rem;
+        //margin-right: 1rem;
         width: 100%;
     }
 
@@ -169,14 +200,15 @@ input:focus, input:active {
     .top-menu .navbar-toggler {
         //padding: 0!important;
         //margin: 0!important;
-        margin-right: 10px!important;
-        margin-top: 10px!important;
+        //margin-right: 10px!important;
+        //margin-top: 10px!important;
         //top: -3rem;
     }
 
     .top-menu .nav-container {
-        position: static!important;
-        width: 100%;
+        //position: static!important;
+        width: 80%;
+        transform: translateY(55%);
     }
 
     .top-menu .nav-link {
@@ -184,11 +216,11 @@ input:focus, input:active {
     }
 
     .top-menu .container {
-        margin-bottom: 50px;
+        //margin-bottom: 50px;
     }
 
     .top-menu .navbar-nav {
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 }

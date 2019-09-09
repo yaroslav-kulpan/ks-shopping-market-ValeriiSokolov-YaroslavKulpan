@@ -1,9 +1,5 @@
 @import "variable";
 
-.font-dark {
-    color: $bg-dark;
-}
-
 @mixin flexCenter {
     display: flex !important;
     justify-content: center !important;
