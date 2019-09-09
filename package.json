@@ -28,7 +28,8 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-terser": "^1.1.7",
-    "imagemin": "^6.1.0"
+    "imagemin": "^6.1.0",
+    "stylelint-config-standard": "^18.3.0"
   },
   "dependencies": {
     "gulp-imagemin": "^6.0.0"
