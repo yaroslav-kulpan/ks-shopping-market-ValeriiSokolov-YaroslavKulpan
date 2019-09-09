@@ -45,3 +45,9 @@
     font-size: 14px;
     padding: 0.15rem 0.6rem;
 }
+
+@media (min-width: 768px) {
+    .header .container {
+        padding-left: 2rem;
+    }
+}

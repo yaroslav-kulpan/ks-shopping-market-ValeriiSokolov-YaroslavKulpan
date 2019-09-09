@@ -33,11 +33,9 @@
 button:focus, button:active,
 input:focus, input:active {
     outline: none !important;
-    //box-shadow: none !important;
 }
 
 .top-menu {
-    //color: $bg-dark;
     z-index: 5;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5) !important;
 }
@@ -93,6 +91,12 @@ input:focus, input:active {
     color: white;
 }
 
+@media (min-width: 768px) {
+    .form-custom-size {
+        width: 285px!important;
+    }
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
     .font-size-normal {
         font-size: .8rem;
@@ -114,7 +118,6 @@ input:focus, input:active {
     }
 
     .top-menu .navbar-nav {
-        //margin-left: -70px;
         background-color: $bg-dark;
         padding-bottom: 20px;
         padding-top: 20px;
@@ -149,29 +152,46 @@ input:focus, input:active {
         border-bottom: 1px solid #a0a0a0;
     }
 
-    .nav-container {
-        //position: absolute;
-    }
-
     .btn-container {
         height: 100%;
     }
 }
 
-@media (max-width: 520px) {
-    .top-menu .nav-item {
-        margin-left: 40px;
-    }
-
-    .btn-container {
-        //margin-left: 40px;
+@media (min-width: 575px) and (max-width: 767.98px){
+    .top-menu .nav-container {
+        padding-right: 1rem;
     }
 }
 
-@media (min-width: 576px) {
-    //.container {
-    //    max-width: 540px;
-    //}
+@media (min-width: 575px) {
+    .top-menu .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (min-width: 530px) and (max-width: 767.98px) {
+    .form-custom-size {
+        width: 320px !important;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 529.98px) {
+    .form-custom-size {
+        width: 260px !important;
+    }
+}
+
+
+@media (min-width: 481px) {
+    .form-custom-position {
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
+    }
+
+    .top-menu .navbar-toggler {
+        transform: translateY(60%);
+    }
 }
 
 @media (max-width: 480px) {
@@ -181,8 +201,6 @@ input:focus, input:active {
     }
 
     .form-custom-position {
-        //padding-bottom: 4rem!important;
-        //margin-right: 1rem;
         width: 100%;
     }
 
@@ -192,31 +210,16 @@ input:focus, input:active {
 
     .btn-container {
         margin-left: 0;
-        //margin-top: 5rem;
-        //margin-bottom: 5rem;
         height: auto;
     }
 
-    .top-menu .navbar-toggler {
-        //padding: 0!important;
-        //margin: 0!important;
-        //margin-right: 10px!important;
-        //margin-top: 10px!important;
-        //top: -3rem;
-    }
-
     .top-menu .nav-container {
-        //position: static!important;
         width: 80%;
         transform: translateY(55%);
     }
 
     .top-menu .nav-link {
         font-size: 1.5rem;
-    }
-
-    .top-menu .container {
-        //margin-bottom: 50px;
     }
 
     .top-menu .navbar-nav {
