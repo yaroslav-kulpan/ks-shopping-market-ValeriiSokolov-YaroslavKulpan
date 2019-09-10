@@ -1,0 +1,47 @@
+.quick-view-heart{
+  border: 1px solid #2A2A2A;
+  border-radius: 0;
+  padding: 6.5px 11px;
+}
+
+.social-icons {
+  border: 1px solid #2A2A2A;
+  color: #d7d7d7;
+  padding: 11px 11px;
+}
+
+.facebook-link {
+  background-color: #3b5998;
+}
+
+.facebook-icon {
+  color: #ffffff;
+}
+
+.google-icon {
+  color: #d62d20;
+}
+
+.tweet-icon {
+  color: #4099ff;
+}
+
+.pinterest-icon {
+  color: #c92228;
+}
+
+.linkedin-icon {
+  color: #0077b5;
+}
+
+.social-icons:hover {
+  background-color: #d58e32;
+  color: #FFFFFF;
+}
+
+@media only screen and (max-width: 1200px){
+  .full-screen-modal {
+    max-width: calc(100% - 3.5rem) !important;
+  margin: 0 auto !important;
+  }
+}
