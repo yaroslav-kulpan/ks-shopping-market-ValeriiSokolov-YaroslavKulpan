@@ -22,21 +22,21 @@ for (let i = 0; i < toCart.length; i++) {
                                             </div>
                                             <div class="col-lg-3  col-9 ml-lg-4 d-flex align-items-center justify-content-lg-start justify-content-end">
                                                 <span class="quantity-text mr-4 font-weight-bold">Quantity:</span>
-                                                <span class="quantity-district px-4 py-1 font-weight-bold">2</span>
+                                                <input class="quantity-district px-4 py-1 font-weight-bold" value="2">
                                                 <a href="#" class="btn-mines btn-calc ml-1 text-decoration-none">-</a>
                                                 <a href="#" class="btn-plus btn-calc ml-1 text-decoration-none">+</a>
                                             </div>
-                                            <div class="col-lg-2 col-3 ml-auto d-flex justify-content-center">
-                                                <span class="sum-text position-absolute">Sum</span>
+                                            <div class="col-lg-2 col-3 ml-auto d-flex flex-column justify-content-center align-items-center mb-lg-5">
+                                                <span class="sum-text">Sum</span>
                                                 <span class="sum-district font-weight-bold">$250.00</span>
                                             </div>
                                         </div>
                                     </div>
-        `)
+        `);
     });
 }
 
 function plusCountCart() {
     let oldCount = parseInt($('#countProductCart').html());
-    $('#countProductCart').html(oldCount+1)
+    $('#countProductCart').html(oldCount + 1)
 }
