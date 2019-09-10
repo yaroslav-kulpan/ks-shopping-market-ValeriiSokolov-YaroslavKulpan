@@ -10,5 +10,6 @@
 //= components/furniture-filters/more-products.js
 //= components/working-with-cart/add-product-in-cart.js
 //= components/modal/mobile-filter-modal.js
+//= components/modal/quick-view-modal.js
 //= components/latest-blog-slider/latest-blog-slider.js
 //= common/top-menu.js
