@@ -19,3 +19,7 @@ var products = [
     {id: 'product18', img: 'dist/image/products/furniture/18.png', priceOld: 350, priceNew: 250},
     {id: 'product19', img: 'dist/image/products/furniture/19.png', priceOld: 350, priceNew: 250},
     {id: 'product20', img: 'dist/image/products/furniture/20.png', priceOld: 350, priceNew: 250}];
+
+$(products).each(function (i, product) {
+  product.description = `Chair. Article number ${product.id.toUpperCase()}`;
+});
