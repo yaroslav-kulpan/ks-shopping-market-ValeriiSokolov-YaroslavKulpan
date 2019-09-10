@@ -1,5 +1,6 @@
 .line-throw-text {
   text-decoration: line-through;
+  font-size: 26px;
 }
 
 .added-product {
@@ -7,7 +8,76 @@
   border-radius: 5px;
 }
 
-.quantity-district {
-  border: 1px solid #2A2A2A;
+.product {
+  &-title {
+    color: #2A2A2A;
+    font-size: 30px;
+    top: 20px;
+    left: 260px;
+  }
+
+  &-price {
+    font-size: 27px;
+    background-color: #2A2A2A;
+  }
 }
+
+.quantity {
+  &-district {
+    border: 1px solid #2A2A2A;
+  }
+
+  &-text {
+    font-size: 14px;
+  }
+}
+
+.line-throw-text {
+  color: #D4D4D4;
+}
+
+.btn {
+  &-calc {
+    border: 1px solid;
+  }
+
+  &-plus {
+    padding: 4px 12px;
+    border-color: #d58e32;
+    color: #d58e32;
+    &:hover{
+      border-color: #2A2A2A;
+      color: #2A2A2A;
+    }
+  }
+
+  &-mines {
+    padding: 4px 14px;
+    color: #2A2A2A;
+    border-color: #2A2A2A;
+    &:hover {
+      border-color: #d58e32;
+      color: #d58e32;
+    }
+  }
+}
+
+.sum{
+  &-text {
+    font-size: 26px;
+    color: #D4D4D4;
+  }
+  &-district {
+    font-size: 26px;
+    color: #2A2A2A;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .modal-dialog {
+    max-width: calc(100% - 3.5rem);
+  }
+}
+
+
 

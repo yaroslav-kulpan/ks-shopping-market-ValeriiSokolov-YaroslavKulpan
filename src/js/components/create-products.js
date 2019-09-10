@@ -5,8 +5,8 @@ for(let i = 0; i < products.length; i++) {
                                  alt="...">
                             <span class="furniture-card-sale position-absolute text-white furniture-card-hover-show">sale</span>
                             <a href="#"
-                               class="quick-view furniture-card-hover-btn text-white text-decoration-none position-absolute furniture-card-hover-show" data-id=${products[i].id}>Quick
-                                View</a>
+                               class="quick-view furniture-card-hover-btn text-white text-decoration-none position-absolute furniture-card-hover-show" data-toggle="modal" data-target="#quickViewModal" 
+                               data-id=${products[i].id}>Quick View</a>
                             <a href=""
                                class="add-to-cart furniture-card-hover-btn text-uppercase text-decoration-none text-white position-absolute furniture-card-hover-show" data-id=${products[i].id}><i
                                     class="fa basket-icon fa-shopping-basket p-0 mr-2"></i>add to cart</a>
