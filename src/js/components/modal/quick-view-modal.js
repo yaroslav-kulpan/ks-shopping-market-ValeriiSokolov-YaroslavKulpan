@@ -1,4 +1,4 @@
-let quickView = $('.quick-view');
+let quickView = $('.quick-view-btn');
 $(window).resize(function (){
     mobileResizeModal()
 });
