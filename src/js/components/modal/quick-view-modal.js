@@ -5,13 +5,16 @@ $(window).resize(function (){
 
 for (let i = 0; i < quickView.length; i++) {
     quickView[i].addEventListener('click', function (e) {
+        // console.log($(this).data('id'));
         e.preventDefault();
         let img = '';
+        let dataId = $(this).data('id');
         for (let i = 0; i < products.length; i++) {
             if (products[i].id === $(this).data('id')) {
                 img = products[i].img
             }
         }
+        console.log(img);
         $('#quickViewWrapper').html(`<div class="row">
                     <div class="col-5 quick-view-img">
                     <img src=${img} class="img-fluid" alt="">
@@ -37,7 +40,7 @@ for (let i = 0; i < quickView.length; i++) {
                     <div class="d-flex flex-column">
                     <div class="d-flex align-items-center">
                     <a href="#"
-                               class="add-to-cart furniture-card-hover-btn text-uppercase text-decoration-none text-white" data-id=${products[i].id}><i
+                               class="add-to-cart furniture-card-hover-btn text-uppercase text-decoration-none text-white" data-id=${dataId}><i
                                     class="fa basket-icon fa-shopping-basket p-0 mr-2"></i>add to cart</a>
                                                                         <a href="#" class="btn quick-view-heart ml-1"><i class="far fa-heart"></i></a>
                     </div>
@@ -65,6 +68,43 @@ for (let i = 0; i < quickView.length; i++) {
 </div>
                                  </div>`);
         mobileResizeModal();
+        let toCart = $('.add-to-cart');
+        for (let i = 0; i < toCart.length; i++) {
+            toCart[i].addEventListener('click', function (e) {
+                e.preventDefault();
+                plusCountCart();
+                let img = '';
+                for (let i = 0; i < products.length; i++) {
+                    if (products[i].id === $(this).data('id')) {
+                        img = products[i].img
+                    }
+                }
+                $('.modal-empty').remove();
+                $('#cartContainer').append(`<div class="col-10 offset-1 my-2 added-product">
+                                        <h4 class="product-title position-absolute">Product title</h4>
+                                        <div class="row h-100 d-flex align-items-center added-product-container">
+                                            <div class="col-3 ml-2 h-xl-100">
+                                                <img src=${img} alt="" class="img-fluid"  >
+                                            </div>
+                                            <div class="col-3 mt-0  product-price-container d-flex">
+                                                <span class="line-throw-text mr-2">$350.00</span>
+                                                <span class="product-price text-white font-weight-bold px-2 py-1">$250.00</span>
+                                            </div>
+                                            <div class="col-lg-3  col-9 ml-lg-4 d-flex align-items-center justify-content-lg-start justify-content-end">
+                                                <span class="quantity-text mr-4 font-weight-bold">Quantity:</span>
+                                                <input class="quantity-district px-4 py-1 font-weight-bold" value="2">
+                                                <a href="#" class="btn-mines btn-calc ml-1 text-decoration-none">-</a>
+                                                <a href="#" class="btn-plus btn-calc ml-1 text-decoration-none">+</a>
+                                            </div>
+                                            <div class="col-lg-2 col-3 ml-auto d-flex flex-column justify-content-center align-items-center mb-lg-5">
+                                                <span class="sum-text">Sum</span>
+                                                <span class="sum-district font-weight-bold">$250.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+        `);
+            });
+        }
     });
 }
 
