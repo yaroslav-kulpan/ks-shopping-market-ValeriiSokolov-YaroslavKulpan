@@ -29,9 +29,9 @@ for (let i = 0; i < quickView.length; i++) {
                                 <span class="far fa-star"></span>
                                 <span class="far fa-star"></span>
                                 <span class="ml-3">(0 reviews)</span>
-                    </div>
-                    <hr>
-                    </div>
+                            </div>
+                           <hr>
+                        </div>
                     <div>
                     <span class="line-throw-text">$350.00</span>
                     <span class="product-price text-white font-weight-bold px-2 py-1">$250.00</span>  
@@ -47,8 +47,8 @@ for (let i = 0; i < quickView.length; i++) {
                     <div>
                     <h4>Quick overwrite</h4>
                     <p>Nam tristique porta ligula, vel viverra sem eleifend nec. Nulla sed purus augue, eu euis mod tellus. Nam mattis eros tis sagittis. Vestibulum suscipit cursus biben.</p>
-                                        <hr>
-                    </div>    
+                       <hr>
+                        </div>    
                     </div>
                     <div class="d-flex flex-column">
                     <span>Availability:<span> In Stock</span></span>

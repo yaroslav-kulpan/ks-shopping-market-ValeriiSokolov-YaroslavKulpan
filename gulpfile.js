@@ -2,7 +2,7 @@
 const gulp = require('gulp');
 const rigger = require('gulp-rigger');
 const sass = require('gulp-sass');							//sass
-const browserSync = require('browser-sync').create();//runtime watcher and changer
+const browserSync = require('browser-sync').create();       //runtime watcher and changer
 const clean = require('gulp-clean');						//cleaner product directory "dev"
 const cleanCSS = require('gulp-clean-css');					//CSS minifier
 const sourcemaps = require('gulp-sourcemaps');				//SCSS navigation in Chrome inspector
