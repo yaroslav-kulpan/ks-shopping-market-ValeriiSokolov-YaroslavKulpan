@@ -65,26 +65,71 @@ function minusCountCart() {
 }
 
 function renderProduct(productInfo) {
-  return `<div class="col-10 offset-1 my-2 added-product" data-id="${productInfo.id}">
-            <h4 class="product-title position-absolute"">${productInfo.description}</h4>
-            <div class="row h-100 d-flex align-items-center added-product-container">
-                <div class="col-3 ml-2 h-xl-100">
-                    <img src=${productInfo.img} alt="" class="img-fluid">
+  return `<div class="mx-lg-5 my-3 border rounded added-product position-relative" data-id="${productInfo.id}">
+            <h4 class="product-title font-size-card-l mw-100 font-weight-bold position-absolute"">${productInfo.description}</h4>
+            <div class="row no-gutters d-flex align-items-center h-100 m-0">
+                <div class="col-3 h-xl-100 text-center">
+                    <img src=${productInfo.img} alt="" class="img-fluid py-5 py-lg-4 added-product-img">
                 </div>
-                <div class="col-3 p-0 product-price-container d-flex">
-                    <span class="line-throw-text w-100 text-center">$${productInfo.priceOld.toFixed(2)}</span>
-                    <span class="product-price text-white w-100 text-center font-weight-bold">$${productInfo.priceNew.toFixed(2)}</span>
-                </div>
-                <div class="col-lg-3  col-9 ml-lg-4 d-flex align-items-center justify-content-lg-start justify-content-end">
-                    <span class="quantity-text mr-4 font-weight-bold font-dark">Quantity:</span>
-                    <input class="quantity-district px-4 py-1 font-weight-bold" maxlength="2" value="1">
-                    <a href="#" class="btn-minus btn-calc ml-1 text-decoration-none">-</a>
-                    <a href="#" class="btn-plus btn-calc ml-1 text-decoration-none">+</a>
-                </div>
-                <div class="col-lg-2 col-3 ml-auto d-flex flex-column justify-content-center align-items-center mb-lg-5">
-                    <span class="sum-text">Sum</span>
-                    <span class="sum-district font-weight-bold">$${productInfo.priceNew.toFixed(2)}</span>
+                <div class="col-9">
+                  <div class="row no-gutters pt-5">
+                    <div class="col-12 col-lg-3 d-flex py-0 px-4 product-price-container">
+                      <span class="line-throw-text px-2 font-size-card-m w-100 text-center">$${productInfo.priceOld.toFixed(2)}</span>
+                      <span class="product-price px-2 font-size-card-l text-white w-100 text-center font-weight-bold">$${productInfo.priceNew.toFixed(2)}</span>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-5 d-flex my-2 align-items-center justify-content-center justify-content-lg-end p-0">
+                      <span class="quantity-text font-size-card-s mr-2 mr-lg-4 my-3 font-weight-bold font-dark">Quantity:</span>
+                      <input class="quantity-district px-4 py-1 bg-white font-size-card-s font-weight-bold" maxlength="2" value="1">
+                      <a href="#" class="btn-minus px-2 ml-1 text-decoration-none">
+                        <i class="fas fa-minus"></i>
+                      </a>
+                      <a href="#" class="btn-plus px-2 ml-1 text-decoration-none">
+                        <i class="fas fa-plus"></i>
+                      </a>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center flex-lg-column align-items-center ml-auto pb-lg-4">
+                      <span class="sum-text font-size-card-m">Sum</span>
+                      <span class="sum-district font-size-card-l ml-3 font-weight-bold">$${productInfo.priceNew.toFixed(2)}</span>
+                    </div>
+                  </div>
                 </div>
             </div>
         </div>`;
 }
+
+/*`<div class="mx-5 my-3 border rounded added-product position-relative" data-id="${productInfo.id}">
+            <h4 class="product-title font-size-card-l font-weight-bold position-absolute"">${productInfo.description}</h4>
+            <div class="row d-flex align-items-center h-100 m-0">
+                <div class="col-3 h-xl-100 text-center">
+                    <img src=${productInfo.img} alt="" class="img-fluid py-4 added-product-img">
+                </div>
+                <div class="col-9">
+                  <div class="row">
+                    <div class="col-12">
+
+                    </div>
+                    <div class="col-12">
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-2 d-flex py-0 px-4 product-price-container">
+                    <span class="line-throw-text px-2 font-size-card-m w-100 text-center">$${productInfo.priceOld.toFixed(2)}</span>
+                    <span class="product-price px-2 font-size-card-l text-white w-100 text-center font-weight-bold">$${productInfo.priceNew.toFixed(2)}</span>
+                </div>
+                <div class="col-9 col-lg-4 d-flex align-items-center justify-content-end p-0">
+                    <span class="quantity-text font-size-card-s mr-4 font-weight-bold font-dark">Quantity:</span>
+                    <input class="quantity-district px-4 py-1 bg-white font-size-card-s font-weight-bold" maxlength="2" value="1">
+                    <a href="#" class="btn-minus px-2 ml-1 text-decoration-none">
+                      <i class="fas fa-minus"></i>
+                    </a>
+                    <a href="#" class="btn-plus px-2 ml-1 text-decoration-none">
+                      <i class="fas fa-plus"></i>
+                    </a>
+                </div>
+                <div class="col-3 col-lg-2 d-flex flex-column align-items-center ml-auto pb-lg-4">
+                    <span class="sum-text font-size-card-m">Sum</span>
+                    <span class="sum-district font-size-card-l font-weight-bold">$${productInfo.priceNew.toFixed(2)}</span>
+                </div>
+            </div>
+        </div>`*/

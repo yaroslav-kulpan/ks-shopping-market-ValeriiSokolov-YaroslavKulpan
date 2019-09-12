@@ -16,7 +16,7 @@ button.close:hover {
 .modal-empty-heading {
     /* Style for "Your cart..." */
     color: #939393;
-    font-family: "Poppins - Semi Bold", sans-serif;
+    font-family: Poppins, sans-serif;
     font-size: 48px;
     font-weight: 400;
     line-height: 41px;
@@ -29,4 +29,14 @@ button.close:hover {
     font-size: 30px;
     font-weight: 300;
     line-height: 52.71px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .modal-empty-heading {
+        font-size: 33px;
+    }
+
+    .modal-empty-description {
+        font-size: 20px;
+    }
 }
