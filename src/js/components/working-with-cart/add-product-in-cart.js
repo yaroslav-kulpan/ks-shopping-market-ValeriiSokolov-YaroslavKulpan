@@ -26,6 +26,7 @@ $(document).ready(function () {
         $('#cartContainer .quantity-district').prop('disabled', true);
         $('#cartContainer .quantity-district').prop('type', 'text');
         showTotal();
+        showButtons($('#myModal .modal-footer'));
         return;
       }
 
@@ -47,6 +48,7 @@ $(document).ready(function () {
         $('#cartContainer .quantity-district').prop('disabled', true);
         $('#cartContainer .quantity-district').prop('type', 'text');
         showTotal();
+        addCartButtons($('#myModal .modal-footer'));
       }
     });
   });

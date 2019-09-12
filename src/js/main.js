@@ -12,6 +12,7 @@
 //= components/working-with-cart/add-product-in-cart.js
 //= components/working-with-cart/total-price.js
 //= components/working-with-cart/product-card-counter.js
+//= components/working-with-cart/cart-modal-buttons.js
 
 //= components/modal/mobile-filter-modal.js
 //= components/modal/quick-view-modal.js
