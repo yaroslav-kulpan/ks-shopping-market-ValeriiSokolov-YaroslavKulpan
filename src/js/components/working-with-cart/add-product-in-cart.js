@@ -1,6 +1,6 @@
 $(document).ready(function () {
   let toCart = $('.add-to-cart');
-/////////////////////////////////////////////////-
+////////////////////////////////////////////////-
   toCart.each((i, item) => $(item).data('testId', `${products[i].id}`));
 ////////////////////////////////////////////////^
   $(toCart).each(function (index, item) {
@@ -22,6 +22,9 @@ $(document).ready(function () {
 
       if (!$('#cartContainer').children().length) {
         $('#cartContainer').append(productCard);
+
+        $('#cartContainer .quantity-district').prop('disabled', true);
+        $('#cartContainer .quantity-district').prop('type', 'text');
         return;
       }
 
@@ -40,6 +43,11 @@ $(document).ready(function () {
           $('#cartContainer').append(productCard);
         }
       }
+
+      $('#cartContainer .quantity-district').prop('disabled', true);
+      $('#cartContainer .quantity-district').prop('type', 'text');
+
+      //= product-card-counter.js
     });
   });
 });
@@ -47,6 +55,11 @@ $(document).ready(function () {
 function plusCountCart() {
   let oldCount = parseInt($('#countProductCart').html());
   $('#countProductCart').html(oldCount + 1);
+}
+
+function minusCountCart() {
+  let oldCount = parseInt($('#countProductCart').html());
+  $('#countProductCart').html(oldCount - 1);
 }
 
 function renderProduct(productInfo) {
@@ -62,7 +75,7 @@ function renderProduct(productInfo) {
                 </div>
                 <div class="col-lg-3  col-9 ml-lg-4 d-flex align-items-center justify-content-lg-start justify-content-end">
                     <span class="quantity-text mr-4 font-weight-bold font-dark">Quantity:</span>
-                    <input class="quantity-district px-4 py-1 font-weight-bold" value="1">
+                    <input class="quantity-district px-4 py-1 font-weight-bold" maxlength="2" value="1">
                     <a href="#" class="btn-minus btn-calc ml-1 text-decoration-none">-</a>
                     <a href="#" class="btn-plus btn-calc ml-1 text-decoration-none">+</a>
                 </div>
@@ -73,3 +86,11 @@ function renderProduct(productInfo) {
             </div>
         </div>`;
 }
+
+/*<div class="row h-100 d-flex align-items-center added-product-container">
+                <div class="col-9 ml-2 h-xl-100"></div>
+                <div class="col-lg-2 col-3 ml-auto d-flex flex-column justify-content-center align-items-center mb-lg-5">
+                    <span class="sum-text">Total:</span>
+                    <span class="sum-district font-weight-bold">$${productInfo.priceNew.toFixed(2)}</span>
+                </div>
+            </div>*/

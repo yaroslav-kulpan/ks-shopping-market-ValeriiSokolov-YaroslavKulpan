@@ -22,8 +22,7 @@ $(document).ready(function () {
   const goTop = $("a[href='#begin']");
 
   for (let i = 0; i < navLinksCollection.length; i++) {
-    $(navLinksCollection.eq(i)).on('mousedown', function (event) {
-      console.log(this);
+    $(navLinksCollection.eq(i)).on('mousedown', function (event) {// console.log(this);
       event.preventDefault();
       $(".top-menu .collapse").collapse('toggle');
       $(".top-menu .collapse").on('hidden.bs.collapse', function () {

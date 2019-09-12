@@ -1,7 +1,7 @@
 //= common/new.js
 //= components/product-list.js
 //= components/modal/modal.js
-//= components/modal-basket.js
+//= components/modal/modal-cart.js
 //= components/product-slider/product-slider.js
 //= components/create-products.js
 //= components/furniture-filters/filter-by-price.js
@@ -15,4 +15,4 @@
 //= components/modal/mobile-filter-modal.js
 //= components/modal/quick-view-modal.js
 //= components/latest-blog-slider/latest-blog-slider.js
-//= common/top-menu.js
+//= components/top-menu.js
