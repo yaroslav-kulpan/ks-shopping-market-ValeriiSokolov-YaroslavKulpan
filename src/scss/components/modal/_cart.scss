@@ -8,6 +8,11 @@
   border-radius: 5px;
 }
 
+.total-price {
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+}
+
 .product {
   &-title {
     color: #2A2A2A;
@@ -68,6 +73,17 @@
   &-text {
     font-size: 26px;
     color: #D4D4D4;
+  }
+  &-district {
+    font-size: 26px;
+    color: #2A2A2A;
+  }
+}
+
+.total{
+  &-text {
+    font-size: 26px;
+    color: #2A2A2A;
   }
   &-district {
     font-size: 26px;

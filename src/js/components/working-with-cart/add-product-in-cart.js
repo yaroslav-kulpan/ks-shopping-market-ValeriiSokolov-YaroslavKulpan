@@ -25,6 +25,7 @@ $(document).ready(function () {
 
         $('#cartContainer .quantity-district').prop('disabled', true);
         $('#cartContainer .quantity-district').prop('type', 'text');
+        showTotal();
         return;
       }
 
@@ -42,12 +43,11 @@ $(document).ready(function () {
         } else {
           $('#cartContainer').append(productCard);
         }
+
+        $('#cartContainer .quantity-district').prop('disabled', true);
+        $('#cartContainer .quantity-district').prop('type', 'text');
+        showTotal();
       }
-
-      $('#cartContainer .quantity-district').prop('disabled', true);
-      $('#cartContainer .quantity-district').prop('type', 'text');
-
-      //= product-card-counter.js
     });
   });
 });
@@ -86,11 +86,3 @@ function renderProduct(productInfo) {
             </div>
         </div>`;
 }
-
-/*<div class="row h-100 d-flex align-items-center added-product-container">
-                <div class="col-9 ml-2 h-xl-100"></div>
-                <div class="col-lg-2 col-3 ml-auto d-flex flex-column justify-content-center align-items-center mb-lg-5">
-                    <span class="sum-text">Total:</span>
-                    <span class="sum-district font-weight-bold">$${productInfo.priceNew.toFixed(2)}</span>
-                </div>
-            </div>*/
