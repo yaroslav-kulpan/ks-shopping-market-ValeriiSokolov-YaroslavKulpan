@@ -7,9 +7,9 @@ function countTotalPrice(sums) {
 }
 
 function renderTotal() {
-  return `<div class="row mx-5 total-price " data-id="total">
-            <div class="col-9 ml-2 h-xl-100"></div>
-            <div class="col-lg-2 col-3 ml-auto d-flex justify-content-center align-items-center">
+  return `<div class="row mx-0 mx-lg-5 total-price " data-id="total">
+            <div class="col-5 col-lg-10 ml-2 h-xl-100"></div>
+            <div class="col-7 col-lg-2 ml-auto d-flex justify-content-end align-items-center">
               <span class="total-text pr-1 font-size-card-l">Total:</span>
               <span class="total-district font-size-card-l"></span>
             </div>

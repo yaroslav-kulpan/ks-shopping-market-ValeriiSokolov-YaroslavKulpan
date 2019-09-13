@@ -35,9 +35,9 @@
         //top: 20px;
         //left: 260px;
         width: max-content;
-        left: 50%;
-        top: 50%;
-        transform: translate(-65%, -300%);
+        //left: 50%;
+        //top: 50%;
+        //transform: translate(-65%, -300%);
     }
 
     &-price {
@@ -50,6 +50,7 @@
         max-width: 70px;
         text-align: center;
         border: 1px solid $primary-color;
+        font-size: 14.5px;
     }
 
     &-text {
@@ -117,13 +118,52 @@
     }
 }
 
-@media only screen and (min-width: 310px) and (max-width: 767.98px) {
-  .product {
-    &-title {
-      left: 50%;
-      top: 5%;
-      transform: translate(-38%, 0);
-      font-size: 1rem;
+@media only screen and (min-width: 992px) {
+    .added-product-container-3 {
+        margin-top: -155px;
     }
-  }
+}
+
+@media only screen and (min-width: 768px) {
+    .added-product-container-3 {
+        margin-top: -140px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+    .added-product-container-3 {
+        margin-top: -30%;
+    }
+
+    .font-size-card-l {
+        font-size: 19px;
+    }
+
+    .font-size-card-m {
+        font-size: 17px;
+    }
+
+    .font-size-card-s {
+        font-size: 12.5px;
+    }
+}
+
+@media only screen and (min-width: 310px) and (max-width: 575.98px) {
+    .font-size-card-l {
+        font-size: 20px;
+    }
+
+    .font-size-card-m {
+        font-size: 18px;
+    }
+
+    .font-size-card-s {
+        font-size: 12.5px;
+    }
+}
+
+@media only screen and (min-width: 310px) and (max-width: 574.98px) {
+    .product-price-container {
+        max-width: 200px;
+    }
 }
