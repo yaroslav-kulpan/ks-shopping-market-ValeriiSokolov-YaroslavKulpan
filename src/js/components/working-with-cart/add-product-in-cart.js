@@ -5,7 +5,7 @@ $(document).ready(function () {
   toCartFromFurniture.each((i, item) => $(item).data('test-id', `${products[i].id}`));
   toCartFromQuickMenu.each((i, item) => $(item).data('test-id', `${$(item).prev().data('id')}`));
 
-  toCartFromFurniture.each(function (index, item) {
+  toCartFromFurniture.each(function (i, item) {
     $(item).on('click', function (e) {
       e.preventDefault();
       plusCountCart();
