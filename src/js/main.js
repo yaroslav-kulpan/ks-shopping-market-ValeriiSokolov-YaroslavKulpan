@@ -15,6 +15,9 @@
 //= components/working-with-cart/cart-modal-buttons.js
 
 //= components/modal/mobile-filter-modal.js
-//= components/modal/quick-view-modal.js
+
+// components/modal/quick-view-modal.js
+//= components/modal/quick-view-modal-2.js
+
 //= components/latest-blog-slider/latest-blog-slider.js
 //= components/top-menu.js

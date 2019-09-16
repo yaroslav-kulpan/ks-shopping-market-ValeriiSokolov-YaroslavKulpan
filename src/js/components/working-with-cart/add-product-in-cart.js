@@ -1,58 +1,77 @@
 $(document).ready(function () {
-  let toCart = $('.add-to-cart');
-////////////////////////////////////////////////-
-  toCart.each((i, item) => $(item).data('testId', `${products[i].id}`));
-////////////////////////////////////////////////^
-  $(toCart).each(function (index, item) {
+  let toCartFromFurniture = $('.add-to-cart');
+  let toCartFromQuickMenu = $('.btn-add-cart');
+
+  toCartFromFurniture.each((i, item) => $(item).data('test-id', `${products[i].id}`));
+  toCartFromQuickMenu.each((i, item) => $(item).data('test-id', `${$(item).prev().data('id')}`));
+
+  toCartFromFurniture.each(function (index, item) {
     $(item).on('click', function (e) {
       e.preventDefault();
       plusCountCart();
+      addCurrentProductToCart(item);
+    });
+  });
 
-      let currentProduct = {};
-
-      $(products).each((i, product) => {
-        if (product.id === $(item).data(`testId`)) {
-          currentProduct = $.extend({}, product);
-        }
-      });
-
-      let productCard = renderProduct(currentProduct);
-
-      $('.modal-empty').remove();
-
-      if (!$('#cartContainer').children().length) {
-        $('#cartContainer').append(productCard);
-
-        $('#cartContainer .quantity-district').prop('disabled', true);
-        $('#cartContainer .quantity-district').prop('type', 'text');
-        showTotal();
-        showButtons($('#myModal .modal-footer'));
-        return;
-      }
-
-      if ($('#cartContainer').children().length) {
-        currentProduct.isInCart = false;
-        $('#cartContainer .added-product').each(function (i, cardItem) {
-          if ($(cardItem).data('id') === $(item).data('id')) {
-            currentProduct.isInCart = true;
-            currentProduct.card = cardItem;
-          }
-        });
-        if (currentProduct.isInCart) {
-          $(currentProduct.card).find('.quantity-district').val((i, value) => currentProduct.quantity = parseInt(value) + 1);
-          $(currentProduct.card).find('.sum-district').text(`$${(currentProduct.quantity * currentProduct.priceNew).toFixed(2)}`);
-        } else {
-          $('#cartContainer').append(productCard);
-        }
-
-        $('#cartContainer .quantity-district').prop('disabled', true);
-        $('#cartContainer .quantity-district').prop('type', 'text');
-        showTotal();
-        addCartButtons($('#myModal .modal-footer'));
+  toCartFromQuickMenu.each(function(i, item) {
+    $(item).on('click', function (e) {
+      if ($(item).closest('.slick-slide').hasClass('slick-active')) {
+        e.preventDefault();
+        plusCountCart();
+        addCurrentProductToCart(item);
       }
     });
   });
 });
+
+function addCurrentProductToCart(clickedButton) {
+  let currentProductInfo = getCurrentProductInfo(products, clickedButton);
+  let productCard = renderProductCard(currentProductInfo);
+
+  $('.modal-empty').remove();
+
+  if (!$('#cartContainer .added-product').length) {
+    $('#cartContainer').append(productCard);
+
+    $('#cartContainer .quantity-district').prop('disabled', true);
+    $('#cartContainer .quantity-district').prop('type', 'text');
+    showTotal();
+    showButtons($('#myModal .modal-footer'));
+    return;
+  }
+
+  if ($('#cartContainer .added-product').length) {
+    currentProductInfo.isInCart = false;
+    $('#cartContainer .added-product').each(function (i, cardItem) {
+      if ($(cardItem).data('id') === $(clickedButton).data('test-id')) {
+        currentProductInfo.isInCart = true;
+        currentProductInfo.card = cardItem;
+      }
+    });
+    if (currentProductInfo.isInCart) {
+      $(currentProductInfo.card).find('.quantity-district').val((i, value) => currentProductInfo.quantity = parseInt(value) + 1);
+      $(currentProductInfo.card).find('.sum-district').text(`$${(currentProductInfo.quantity * currentProductInfo.priceNew).toFixed(2)}`);
+    } else {
+      $('#cartContainer').append(productCard);
+    }
+
+    $('#cartContainer .quantity-district').prop('disabled', true);
+    $('#cartContainer .quantity-district').prop('type', 'text');
+    showTotal();
+  }
+}
+
+function getCurrentProductInfo(productsArray, clickedButton) {
+  let productInfo = {};
+
+  $(productsArray).each((i, product) => {
+    if (product.id === $(clickedButton).data(`test-id`)) {
+      productInfo = $.extend({}, product);
+    }
+  });
+
+  return productInfo;
+}
 
 function plusCountCart() {
   let oldCount = parseInt($('#countProductCart').html());
@@ -64,7 +83,7 @@ function minusCountCart() {
   $('#countProductCart').html(oldCount - 1);
 }
 
-function renderProduct(productInfo) {
+function renderProductCard(productInfo) {
   return `<div class="added-product mx-lg-5 my-3 border rounded" data-id="${productInfo.id}">
             <div class="row no-gutters d-flex align-items-center align-items-sm-start h-100 m-0">
                 <div class="col-12 col-sm-8 order-sm-2 h-xl-100 text-center text-md-left">
@@ -102,40 +121,3 @@ function renderProduct(productInfo) {
             </div>
         </div>`;
 }
-
-/*`<div class="mx-5 my-3 border rounded added-product position-relative" data-id="${productInfo.id}">
-            <h4 class="product-title font-size-card-l font-weight-bold position-absolute"">${productInfo.description}</h4>
-            <div class="row d-flex align-items-center h-100 m-0">
-                <div class="col-3 h-xl-100 text-center">
-                    <img src=${productInfo.img} alt="" class="img-fluid py-4 added-product-img">
-                </div>
-                <div class="col-9">
-                  <div class="row">
-                    <div class="col-12">
-
-                    </div>
-                    <div class="col-12">
-
-                    </div>
-                  </div>
-                </div>
-                <div class="col-2 d-flex py-0 px-4 product-price-container">
-                    <span class="line-throw-text px-2 font-size-card-m w-100 text-center">$${productInfo.priceOld.toFixed(2)}</span>
-                    <span class="product-price px-2 font-size-card-l text-white w-100 text-center font-weight-bold">$${productInfo.priceNew.toFixed(2)}</span>
-                </div>
-                <div class="col-9 col-lg-4 d-flex align-items-center justify-content-end p-0">
-                    <span class="quantity-text font-size-card-s mr-4 font-weight-bold font-dark">Quantity:</span>
-                    <input class="quantity-district px-4 py-1 bg-white font-size-card-s font-weight-bold" maxlength="2" value="1">
-                    <a href="#" class="btn-minus px-2 ml-1 text-decoration-none">
-                      <i class="fas fa-minus"></i>
-                    </a>
-                    <a href="#" class="btn-plus px-2 ml-1 text-decoration-none">
-                      <i class="fas fa-plus"></i>
-                    </a>
-                </div>
-                <div class="col-3 col-lg-2 d-flex flex-column align-items-center ml-auto pb-lg-4">
-                    <span class="sum-text font-size-card-m">Sum</span>
-                    <span class="sum-district font-size-card-l font-weight-bold">$${productInfo.priceNew.toFixed(2)}</span>
-                </div>
-            </div>
-        </div>`*/
