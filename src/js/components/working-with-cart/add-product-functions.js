@@ -1,34 +1,8 @@
-$(document).ready(function () {
-  let toCartFromFurniture = $('.add-to-cart');
-  let toCartFromQuickMenu = $('.btn-add-cart');
-
-  toCartFromFurniture.each((i, item) => $(item).data('test-id', `${products[i].id}`));
-  toCartFromQuickMenu.each((i, item) => $(item).data('test-id', `${$(item).prev().data('id')}`));
-
-  toCartFromFurniture.each(function (i, item) {
-    $(item).on('click', function (e) {
-      e.preventDefault();
-      plusCountCart();
-      addCurrentProductToCart(item);
-    });
-  });
-
-  toCartFromQuickMenu.each(function(i, item) {
-    $(item).on('click', function (e) {
-      if ($(item).closest('.slick-slide').hasClass('slick-active')) {
-        e.preventDefault();
-        plusCountCart();
-        addCurrentProductToCart(item);
-      }
-    });
-  });
-});
-
 function addCurrentProductToCart(clickedButton) {
   let currentProductInfo = getCurrentProductInfo(products, clickedButton);
   let productCard = renderProductCard(currentProductInfo);
 
-  $('.modal-empty').remove();
+  $('#myModal .modal-empty').remove();
 
   if (!$('#cartContainer .added-product').length) {
     $('#cartContainer').append(productCard);
@@ -120,4 +94,62 @@ function renderProductCard(productInfo) {
                 </div>
             </div>
         </div>`;
+}
+
+function showButtons(parent) {
+  parent.append(`
+  <button type="button" class="btn btn-secondary px-3 px-sm-4 rounded-0 font-size-card-s text-uppercase text-white" data-dismiss="modal">
+    <i class="mr-2 fas fa-chevron-right"></i>Continue
+  </button>
+  <button type="button" class="btn px-3 px-sm-4 rounded-0 text-uppercase font-size-card-s text-white bg-logo" data-dismiss="modal">
+    <i class="mr-2 fas fa-shopping-basket"></i>Buy now
+  </button>`);
+}
+
+function countTotalPrice(sums) {
+  let prices = [];
+  let totalPrice = 0;
+  $(sums).each((i, sum) => prices.push(parseInt($(sum).text().slice(1))));
+  $(prices).each((i, price) => totalPrice += price);
+  return totalPrice;
+}
+
+function renderTotal() {
+  return `<div class="row mx-0 mx-lg-5 total-price " data-id="total">
+            <div class="col-5 col-lg-10 ml-2 h-xl-100"></div>
+            <div class="col-7 col-lg-2 ml-auto d-flex justify-content-end align-items-center">
+              <span class="total-text pr-1 font-size-card-l">Total:</span>
+              <span class="total-district font-size-card-l"></span>
+            </div>
+          </div>`;
+}
+
+function setPriceValue(element, value) {
+  $(element).html(`$${value.toFixed(2)}`);
+}
+
+function showTotal() {
+  if ($('#cartContainer .total-price').length) {
+    $('#cartContainer .total-price').remove();
+  }
+  $('#cartContainer').append(renderTotal());
+  setPriceValue($('#cartContainer .total-district'), countTotalPrice($('#cartContainer .sum-district')));
+}
+
+function addEmptyMessage(parentElem) {
+  parentElem.append(`
+        <p class="modal-empty modal-empty-heading text-center">Your cart is empty</p>
+        <p class="modal-empty modal-empty-description text-center">But it's never too late to fix it :)</p>`);
+}
+
+function plusCountProduct(element) {
+  parseInt(element.val((i, value) => parseInt(value) + 1));
+}
+
+function minusCountProduct(element) {
+  parseInt(element.val((i, value) => parseInt(value) - 1));
+}
+
+function sumProductPrice(elemResult, elemQuantity, elemPrice) {
+  elemResult.text(`$${(parseInt(elemQuantity.val()) * parseInt(elemPrice.text().slice(1))).toFixed(2)}`);
 }

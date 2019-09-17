@@ -1,5 +1,4 @@
-$("#quickViewModal").off().on('show.bs.modal', function () {
-  //console.log($('#quickViewModal .add-to-cart'));
+$(document).ready(function () {
   let toCartFromQuickViewModal = $('#quickViewModal .add-to-cart');
   toCartFromQuickViewModal.each((i, item) => $(item).data('test-id', `${$(item).data('id')}`));
 
@@ -8,6 +7,8 @@ $("#quickViewModal").off().on('show.bs.modal', function () {
       e.preventDefault();
       plusCountCart();
       addCurrentProductToCart(item);
+
+      //= product-card-counter.js
     });
   });
 });
